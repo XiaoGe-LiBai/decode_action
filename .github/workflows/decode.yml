@@ -12,12 +12,30 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
+      with:
+        fetch-depth: 2
+
+    - name: Check for changes in input files
+      id: check_changes
+      run: |
+        if git diff --name-only HEAD~1 HEAD | grep -q "input.py"; then
+          echo "py_changed=true" >> $GITHUB_OUTPUT
+        else
+          echo "py_changed=false" >> $GITHUB_OUTPUT
+        fi
+        if git diff --name-only HEAD~1 HEAD | grep -q "input.js"; then
+          echo "js_changed=true" >> $GITHUB_OUTPUT
+        else
+          echo "js_changed=false" >> $GITHUB_OUTPUT
+        fi
 
     - name: Execute Python script for decoding
+      if: steps.check_changes.outputs.py_changed == 'true'
       run: |
         python src/decode.py
 
     - name: Install dependencies and run decode
+      if: steps.check_changes.outputs.js_changed == 'true'
       run: |
         npm install
         npm run decode
@@ -25,12 +43,18 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "action"
+
     - name: Save decoded output to repository
       run: |
         git status
         ls
-        git add output.js
-        git add output.py
-        git commit -m "Add decoded output file"
-        git push
+        # 检查是否有文件变化
+        if [ -n "$(git status --porcelain)" ]; then
+          # 只添加实际变化的输出文件
+          git add -A output.js output.py
+          git commit -m "Add decoded output file"
+          git push
+        else
+          echo "没有文件变化，跳过提交"
+        fi
         
