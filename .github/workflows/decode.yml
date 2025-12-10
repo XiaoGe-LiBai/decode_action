@@ -20,7 +20,7 @@ jobs:
     - name: Install dependencies and run decode
       run: |
         npm install
-        npm run decode -- [-i input.js] [-o output.js]
+        npm run decode
     - name: Configure Git author
       run: |
         git config --local user.email "action@github.com"
