@@ -1,1066 +1,3919 @@
-//Wed Feb 25 2026 08:14:17 GMT+0000 (Coordinated Universal Time)
+//Mon Mar 09 2026 04:40:05 GMT+0000 (Coordinated Universal Time)
 //Base:<url id="cv1cref6o68qmpt26ol0" type="url" status="parsed" title="GitHub - echo094/decode-js: JS混淆代码的AST分析工具 AST analysis tool for obfuscated JS code" wc="2165">https://github.com/echo094/decode-js</url>
 //Modify:<url id="cv1cref6o68qmpt26olg" type="url" status="parsed" title="GitHub - smallfawn/decode_action: 世界上本来不存在加密，加密的人多了，也便成就了解密" wc="741">https://github.com/smallfawn/decode_action</url>
-const axios = require("axios"),
-  CryptoJS = require("crypto-js"),
-  fs = require("fs"),
-  JSEncrypt = require("node-jsencrypt"),
-  {
-    v4
-  } = require("uuid"),
-  nodeRsa = require("node-rsa"),
-  crypto = require("crypto");
-function validateDate() {
-  const _0x1b146a = new Date(),
-    _0x3cd960 = new Date("2099-11-25"),
-    _0x368db8 = "npm ERR!code 1\n        npm ERR!path / Users / a.aashiq / Desktop / Projects / sdqui / node_modules / node - sass\n        npm ERR!command failed\n        npm ERR!command sh - c node - gyp rebuild ^\n        npm ERR!1 error generated.\n        npm ERR!make: ** * [Release / obj.target / binding / src / binding.o] Error 1\n        npm ERR!gyp ERR!build error\n        npm ERR!gyp ERR!stack Error: \n        failed with exit code: 2\n        npm ERR!gyp ERR!stack at ChildProcess.onExit(/Users/a.aashiq / Desktop / Projects / sdqui / node_modules / node - gyp / lib / build.js: 262: 23)\n        npm ERR!gyp ERR!stack at ChildProcess.emit(node: events: 365: 28)\n        npm ERR!gyp ERR!stack at Process.ChildProcess._handle.onexit(node: internal / child_process: 290: 12)\n        npm ERR!gyp ERR!System Darwin 20.4 .0\n        npm ERR!gyp ERR!command \"/opt/homebrew/Cellar/node/16.2.0/bin/node\"\n        \"/Users/a.aashiq/Desktop/Projects/sdqui/node_modules/.bin/node-gyp\"\n        \"rebuild\"\n        npm ERR!gyp ERR!cwd / Users / a.aashiq / Desktop / Projects / sdqui / node_modules / node - sass\n        npm ERR!gyp ERR!node - v v16 .2 .0\n        npm ERR!gyp ERR!node - gyp - v v3 .8 .0\n        npm ERR!gyp ERR!not ok\n\n        npm ERR!A complete log of this run can be found in:";
-  if (_0x1b146a > _0x3cd960) return console.log("❌ 脚本已过期"), console.log(_0x368db8), false;
-  return true;
-}
-let pubKey = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDBkLT15ThVgz6/NOl6s8GNPofdWzWbCkWnkaAm7O2LjkM1H7dMvzkiqdxU02jamGRHLX/ZNMCXHnPcW/sDhiFCBN18qFvy8g6VYb9QtroI09e176s+ZCtiv7hbin2cCTj99iUpnEloZm19lwHyo69u5UMiPMpq0/XKBO8lYhN/gwIDAQAB";
-const decrypt = new JSEncrypt(),
-  mySetTimeout = setTimeout.bind(globalThis);
-var encryptRequest = function (_0x514378, _0x2b6ca1, _0x54594f) {
-    var _0x278aff = CryptoJS.enc.Utf8.parse(_0x54594f),
-      _0x2d1f48 = CryptoJS.enc.Utf8.parse(_0x514378),
-      _0x433a60 = CryptoJS.TripleDES.encrypt(_0x278aff, _0x2d1f48, {
-        "mode": CryptoJS.mode.CBC,
-        "padding": CryptoJS.pad.Pkcs7,
-        "iv": CryptoJS.enc.Utf8.parse(_0x2b6ca1)
-      });
-    return _0x433a60.ciphertext.toString();
-  },
-  decryptRequest = function (_0x5a926c, _0x55f4c0, _0x5a0f3a) {
-    var _0x3e7ca7 = CryptoJS.enc.Utf8.parse(_0x5a926c),
-      _0x1cc9f4 = CryptoJS.enc.Hex.parse(_0x5a0f3a),
-      _0x42066c = CryptoJS.enc.Base64.stringify(_0x1cc9f4),
-      _0x434ebb = CryptoJS.TripleDES.decrypt(_0x42066c, _0x3e7ca7, {
-        "mode": CryptoJS.mode.CBC,
-        "padding": CryptoJS.pad.Pkcs7,
-        "iv": CryptoJS.enc.Utf8.parse(_0x55f4c0)
-      });
-    return CryptoJS.enc.Utf8.stringify(_0x434ebb).toString();
+const $ = new Env("顺丰速运");
+const notify = $.isNode() ? require("../sendNotify") : "";
+(() => {
+  var p = {
+    HkqgS: "finallyLoc",
+    wAKAE: function (a9, aa) {
+      return a9 && aa;
+    },
+    promy: function (a9, aa) {
+      return a9 < aa;
+    },
+    lORSJ: function (a9, aa) {
+      return a9(aa);
+    },
+    pehlK: function (a9, aa) {
+      return a9 < aa;
+    },
+    dEFCQ: function (a9, aa) {
+      return a9 !== aa;
+    },
+    aDYcB: "symbol",
+    WSyqf: function (a9, aa) {
+      return a9 !== aa;
+    },
+    vjIoF: "rbnyI",
+    XTDwD: function (a9, aa) {
+      return a9 !== aa;
+    },
+    nvRhe: "HKQgo",
+    CzGoX: function (a9, aa) {
+      return a9 == aa;
+    },
+    rbuqJ: "function",
+    ejXOf: function (a9, aa) {
+      return a9 == aa;
+    },
+    BHCfL: function (a9, aa) {
+      return a9(aa);
+    },
+    sNoPZ: function (a9, aa) {
+      return a9(aa);
+    },
+    VzXGV: "try statement without catch or finally",
+    EoACO: function (a9, aa) {
+      return a9 !== aa;
+    },
+    UPxdf: "hyVvG",
+    NnvSy: function (a9, aa) {
+      return a9 != aa;
+    },
+    ONgsa: function (a9, aa) {
+      return a9 != aa;
+    },
+    iPfsk: "@@iterator",
+    Yxdur: "PAoRA",
+    AeOeH: "Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
+    yTSqp: function (a9, aa, ab) {
+      return a9(aa, ab);
+    },
+    bKFZq: function (a9, aa) {
+      return a9(aa);
+    },
+    byQWp: "OPCLB",
+    VIdTz: function (a9, aa) {
+      return a9 === aa;
+    },
+    DmbEW: "GHshk",
+    LrIve: function (a9, aa) {
+      return a9 - aa;
+    },
+    XothA: function (a9, aa) {
+      return a9(aa);
+    },
+    OuCME: "gbPrS",
+    gLoKF: "aPMtq",
+    dCaol: "data",
+    EnvQC: function (a9, aa) {
+      return a9 || aa;
+    },
+    tjWKo: "object",
+    nCdej: "sMRsQ",
+    UzLre: function (a9, aa) {
+      return a9 === aa;
+    },
+    bAzsj: "uhjsu",
+    ZYAHw: function (a9, aa) {
+      return a9 === aa;
+    },
+    ClNkn: "EJXaT",
+    ECczk: "KGmLV",
+    RycZx: function (a9, aa, ab, ac) {
+      return a9(aa, ab, ac);
+    },
+    dGTyw: function (a9, aa) {
+      return a9 % aa;
+    },
+    PotkS: "zDBBT",
+    wdRoa: "uOYve",
+    GPWOd: function (a9, aa, ab, ac) {
+      return a9(aa, ab, ac);
+    },
+    XQSMU: function (a9, aa) {
+      return a9 === aa;
+    },
+    nkWaW: "JbCoc",
+    cTyED: function (a9, aa) {
+      return a9 !== aa;
+    },
+    xLExK: "eKKEy",
+    eUAfW: "undefined",
+    wUetf: "wRXkP",
+    rUAZV: function (a9, aa) {
+      return a9(aa);
+    },
+    roUVP: function (a9, aa) {
+      return a9 == aa;
+    },
+    zDAqi: "number",
+    nHDbm: function (a9, aa) {
+      return a9 !== aa;
+    },
+    SQuTS: "MeYcC",
+    hDXDK: "Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
+    awUON: "VUugl",
+    akpdJ: "KRHqy",
+    GEMVD: function (a9, aa) {
+      return a9 !== aa;
+    },
+    BgvKk: "GQEeH",
+    Bpggu: "hEgVt",
+    Lmkud: "orRwF",
+    OZKiw: "WJrXJ",
+    KRPlP: "sOBkT",
+    autVW: "nhzqR",
+    vrpGo: function (a9, aa) {
+      return a9 !== aa;
+    },
+    nSyNm: "ySGPP",
+    DXxOQ: "rybiz",
+    QsvXq: "wWusb",
+    AWseb: "BqOtX",
+    NjCGs: function (a9, aa) {
+      return a9(aa);
+    },
+    XfKtC: "GzcVL",
+    ArcvF: "BksGq",
+    HzlYu: function (a9, aa) {
+      return a9 in aa;
+    },
+    CHMxj: function (a9, aa, ab, ac, ad, ae, af, ag) {
+      return a9(aa, ab, ac, ad, ae, af, ag);
+    },
+    PGOqi: function (a9, aa) {
+      return a9 !== aa;
+    },
+    iJbag: "][ERROR] ",
+    VMiJP: function (a9, aa) {
+      return a9 < aa;
+    },
+    VupmL: function (a9) {
+      return a9();
+    },
+    qkitp: function (a9, aa) {
+      return a9 === aa;
+    },
+    drMda: "hZUpS",
+    sBpjm: "BEoTF",
+    avzVY: function (a9, aa, ab) {
+      return a9(aa, ab);
+    },
+    ktLNA: function (a9, aa, ab, ac, ad) {
+      return a9(aa, ab, ac, ad);
+    },
+    FOZOT: "next",
+    quchs: "qlbUC",
+    mvrdB: "qtrqz",
+    ZypiC: function (a9, aa) {
+      return a9 == aa;
+    },
+    MyZyI: "string",
+    RiyNk: "Object",
+    YdoSL: function (a9, aa) {
+      return a9 === aa;
+    },
+    FULNW: "Map",
+    WNZxW: function (a9, aa) {
+      return a9 == aa;
+    },
+    qUHUD: function (a9, aa) {
+      return a9 === aa;
+    },
+    AEnga: "Set",
+    iVsSS: "Arguments",
+    XEbKs: function (a9, aa) {
+      return a9 === aa;
+    },
+    CBKjB: "SzEdb",
+    vVKBs: "mHtth",
+    xWOMu: function (a9, aa) {
+      return a9(aa);
+    },
+    lKNIZ: function (a9, aa) {
+      return a9 < aa;
+    },
+    swjTS: function (a9, aa) {
+      return a9 !== aa;
+    },
+    sPTrw: "throw",
+    WAgwI: "IQFMC",
+    HaGWA: function (a9, aa) {
+      return a9 != aa;
+    },
+    nEoGV: function (a9, aa) {
+      return a9 !== aa;
+    },
+    xuFol: "default",
+    UpSro: "@@toPrimitive must return a primitive value.",
+    HwMiQ: "imSmQ",
+    HaWju: "KYaaG",
+    UtjzM: "yvmIo",
+    HVlGU: "normal",
+    LxakN: "xtfgy",
+    cIEgA: "gDGgH",
+    MkfUr: "txyUN",
+    WqsIN: "iMlkO",
+    BdGui: function (a9, aa, ab) {
+      return a9(aa, ab);
+    },
+    abLlB: "qZfAS",
+    hzjHj: function (a9, aa) {
+      return a9 === aa;
+    },
+    wxOSA: "ARenZ",
+    TFZdO: "root",
+    PsbLk: "] 发生错误：",
+    SLusO: "NHwJw",
+    lvXQR: "GeneratorFunction",
+    Fftik: function (a9, aa) {
+      return a9 === aa;
+    },
+    gsWiM: function (a9, aa) {
+      return a9 !== aa;
+    },
+    BZtGW: function (a9, aa) {
+      return a9 === aa;
+    },
+    hLfDJ: "VUFFG",
+    YxlGo: function (a9, aa) {
+      return a9 === aa;
+    },
+    GffaI: "ZUBcB",
+    QIsNH: function (a9, aa) {
+      return a9(aa);
+    },
+    iAdUr: "usablePoint",
+    UjEhe: "cycleSub",
+    jJXKL: "end",
+    tFAtO: function (a9) {
+      return a9();
+    },
+    QuVTz: "tutZs",
+    LwJnN: "esfhJ",
+    ITevY: "OKPXY",
+    jERja: function (a9, aa) {
+      return a9 === aa;
+    },
+    sMHIj: function (a9, aa) {
+      return a9(aa);
+    },
+    Gxrov: function (a9, aa) {
+      return a9 === aa;
+    },
+    UKHWR: "wYsFG",
+    QsQaT: "FWwcL",
+    ggnoS: function (a9, aa) {
+      return a9(aa);
+    },
+    UoksS: function (a9, aa) {
+      return a9 != aa;
+    },
+    UFWYE: "oARuB",
+    JbEJN: function (a9, aa) {
+      return a9 >= aa;
+    },
+    WhiBk: "VUnOt",
+    fmLcB: function (a9, aa) {
+      return a9 === aa;
+    },
+    okrOv: function (a9, aa) {
+      return a9(aa);
+    },
+    rmicb: "mpeCH",
+    bbZeH: "catchLoc",
+    KQFdC: "IEnrN",
+    gBrLR: function (a9, aa, ab) {
+      return a9(aa, ab);
+    },
+    ceuud: function (a9, aa) {
+      return a9 === aa;
+    },
+    BjyUE: "kejMC",
+    TDymy: function (a9, aa) {
+      return a9 < aa;
+    },
+    UxMHb: "vaRxU",
+    xONTI: "vlQbS",
+    ifUKl: function (a9, aa) {
+      return a9 < aa;
+    },
+    GuLyc: function (a9, aa) {
+      return a9(aa);
+    },
+    XuxWl: "https://mcs-mimp-web.sf-express.com/mcs-mimp/share/app/shareRedirect?sign=",
+    npFUQ: "&source=SFAPP&bizCode=647@RnlvejM1R3VTSVZ6d3BNaXJxRFpOUVVtQkp0ZnFpNDBKdytobm5TQWxMeHpVUXVrVzVGMHVmTU5BVFA1bXlwcw==",
+    akwVf: "get",
+    xEcRH: "HvFmc",
+    IOMYV: function (a9, aa) {
+      return a9 == aa;
+    },
+    TElpW: function (a9, aa) {
+      return a9 == aa;
+    },
+    lCqpw: function (a9, aa, ab) {
+      return a9(aa, ab);
+    },
+    UUjwe: "KmfnC",
+    sGupS: function (a9, aa) {
+      return a9 === aa;
+    },
+    QwDQJ: "qWJSb",
+    OHvRb: "break",
+    YaGnt: "return",
+    qUcDx: "nbBCx",
+    kMNuX: function (a9, aa, ab, ac) {
+      return a9(aa, ab, ac);
+    },
+    eCaWh: "_invoke",
+    oPwnt: "(((.+)+)+)+$",
+    MhItt: "kvVNP",
+    FaUYO: function (a9, aa, ab) {
+      return a9(aa, ab);
+    },
+    kNYkX: function (a9, aa) {
+      return a9 + aa;
+    },
+    XsgFO: "yDCXR",
+    uFZMz: "HtAGd",
+    IeAAu: function (a9, aa) {
+      return a9 < aa;
+    },
+    mnlfj: function (a9, aa) {
+      return a9 in aa;
+    },
+    TPQoW: "json",
+    bCUwO: "vIMRP",
+    cnTQW: "TzOQO",
+    pMUZb: "iIlri",
+    GOGVK: "cSWlS",
+    WwYhD: function (a9, aa) {
+      return a9(aa);
+    },
+    voCty: "VFkYr",
+    EYEGv: function (a9, aa) {
+      return a9(aa);
+    },
+    OxpbX: function (a9, aa, ab) {
+      return a9(aa, ab);
+    },
+    NqNtH: function (a9, aa) {
+      return a9 || aa;
+    },
+    YiJxT: function (a9, aa) {
+      return a9(aa);
+    },
+    vvyNW: "Generator is already running",
+    CXwoG: function (a9, aa) {
+      return a9 === aa;
+    },
+    YNMLB: "byzTe",
+    Lixwc: "oYKXq",
+    axAzX: "cfwvY",
+    AkAGR: "HDGGh",
+    KAtOs: function (a9, aa) {
+      return a9 === aa;
+    },
+    BjsqF: "XckHo",
+    LxcRK: function (a9, aa) {
+      return a9 === aa;
+    },
+    Gvxvf: function (a9, aa) {
+      return a9 === aa;
+    },
+    ijkjG: function (a9, aa) {
+      return a9 === aa;
+    },
+    FhDkY: "TheQH",
+    TLTdm: "txWtD",
+    cyGrm: "1|3|5|0|4|2",
+    Suqby: "iterator result is not an object",
+    hbMFU: "The iterator does not provide a '",
+    CCRpR: "' method",
+    dTuLS: "kyktk",
+    zUsgs: function (a9, aa) {
+      return a9 in aa;
+    },
+    bcRXB: "vXqdQ",
+    JQENk: "iBpIm",
+    UxPDr: function (a9, aa) {
+      return a9(aa);
+    },
+    qcOAK: "UmWbv",
+    JRADs: function (a9, aa) {
+      return a9(aa);
+    },
+    zmBtt: " is not iterable",
+    xEhdq: function (a9, aa) {
+      return a9 === aa;
+    },
+    StcdJ: "HXJtY",
+    jvxdL: "biGOg",
+    xTBFd: function (a9, aa) {
+      return a9 === aa;
+    },
+    aRNzU: function (a9, aa) {
+      return a9 === aa;
+    },
+    mAbqJ: "hfGdX",
+    GLPix: "MmAtL",
+    ucKZd: "BgNvA",
+    XjczY: "kJwnL",
+    vfnoy: "[object Generator]",
+    trNMj: function (a9, aa, ab) {
+      return a9(aa, ab);
+    },
+    nLKvv: "LFbpd",
+    TEGRJ: "zHPXb",
+    LZcHs: "eIKOS",
+    dBooR: function (a9, aa) {
+      return a9 != aa;
+    },
+    ZUbOM: function (a9, aa) {
+      return a9 > aa;
+    },
+    svIEc: "] 完成[",
+    YKhBc: "]任务:",
+    ehwex: function (a9) {
+      return a9();
+    },
+    Pliau: function (a9, aa) {
+      return a9 != aa;
+    },
+    hSnVJ: function (a9, aa, ab, ac) {
+      return a9(aa, ab, ac);
+    },
+    dMauF: "oAkhe",
+    jTFtD: function (a9, aa) {
+      return a9 <= aa;
+    },
+    UQkej: "continue",
+    ZxoPd: "qXZqR",
+    Fnphp: "VjfCp",
+    qJhGw: "oRdFt",
+    dHdvJ: "rdAGj",
+    LMXNG: "vioin",
+    nYyff: "] 签到:",
+    EQhBF: "debug",
+    TMdfq: "\n-----------",
+    qsylc: "wttyT",
+    YwSfB: "vYmab",
+    DYYkR: "QpYPz",
+    EFHst: "mnFXX",
+    ZLhQS: function (a9, aa) {
+      return a9 === aa;
+    },
+    xUIlb: "@@asyncIterator",
+    vCqWG: "@@toStringTag",
+    zHcPc: "vWrOL",
+    fvrQd: "AoSwc",
+    OyFom: "suspendedStart",
+    QbyWm: "suspendedYield",
+    vFGEu: "executing",
+    olico: "completed",
+    DTYIX: function (a9, aa) {
+      return a9(aa);
+    },
+    wjHlb: function (a9, aa) {
+      return a9(aa);
+    },
+    LSjPk: function (a9, aa, ab, ac) {
+      return a9(aa, ab, ac);
+    },
+    YcajP: "constructor",
+    MzHIK: function (a9, aa, ab, ac) {
+      return a9(aa, ab, ac);
+    },
+    HWORT: function (a9, aa) {
+      return a9(aa);
+    },
+    dJZPE: "Generator",
+    ZHmxT: function (a9, aa, ab, ac) {
+      return a9(aa, ab, ac);
+    },
+    uEoRV: "toString",
+    PLftC: function (a9, aa) {
+      return a9(aa);
+    },
+    OhNEw: function (a9, aa, ab, ac) {
+      return a9(aa, ab, ac);
+    },
+    JAQJF: function (a9, aa, ab) {
+      return a9(aa, ab);
+    },
+    PoMSP: "PHShr",
+    USGUq: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberGoods~pointMallService~createOrder",
+    tqzCT: "post",
+    iAdgD: "Point_Mall",
+    RkpDX: function (a9, aa) {
+      return a9 == aa;
+    },
+    PauvG: function (a9) {
+      return a9();
+    },
+    hFNFI: function (a9, aa) {
+      return a9 !== aa;
+    },
+    iXIYs: "jQjKl",
+    YrwlJ: "iVlIy",
+    cqBuI: "XfcpB",
+    KcwFU: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~integralTaskStrategyService~fetchIntegral",
+    OzvpZ: "]奖励:",
+    vSWFu: "abhjK",
+    XZlgQ: "VYMkL",
+    OsgCK: "husjm",
+    rvKEi: "BhrAe",
+    COirq: "hkSOc",
+    VeBJL: function (a9, aa) {
+      return a9(aa);
+    },
+    stQLP: function (a9, aa) {
+      return a9 in aa;
+    },
+    BoQBX: function (a9, aa) {
+      return a9 in aa;
+    },
+    LThho: function (a9, aa) {
+      return a9 !== aa;
+    },
+    ualTX: "SGstz",
+    PGxZR: "DCPij",
+    RXJJp: function (a9, aa) {
+      return a9 in aa;
+    },
+    WIBns: function (a9, aa) {
+      return a9(aa);
+    },
+    lGEXL: function (a9, aa) {
+      return a9 === aa;
+    },
+    EkfoJ: function (a9, aa) {
+      return a9 == aa;
+    },
+    xOoIt: "] 上报[",
+    iehOu: "TpMcN",
+    IzxQv: function (a9, aa) {
+      return a9 !== aa;
+    },
+    xBRkT: "dPyOG",
+    ImeHK: "value",
+    Hegwx: "sAcoU",
+    njUdX: function (a9, aa) {
+      return a9 === aa;
+    },
+    LFtXp: "fdahF",
+    nsNns: "gepRv",
+    ryhFC: function (a9, aa) {
+      return a9(aa);
+    },
+    SNZwB: function (a9, aa) {
+      return a9 + aa;
+    },
+    wMvtl: function (a9, aa) {
+      return a9 > aa;
+    },
+    hJBJr: function (a9, aa) {
+      return a9 !== aa;
+    },
+    FqGiv: "rggLV",
+    TnnNR: "aLDTL",
+    DxiWo: "sWDPT",
+    zlBft: function (a9, aa) {
+      return a9 === aa;
+    },
+    lusjv: "SrHus",
+    OSdiR: "NxcHy",
+    jjhKe: function (a9, aa) {
+      return a9 === aa;
+    },
+    eBFML: function (a9, aa) {
+      return a9(aa);
+    },
+    YqYgk: function (a9, aa) {
+      return a9 !== aa;
+    },
+    OKUdm: "mIsEU",
+    OuFBp: function (a9) {
+      return a9();
+    },
+    COjKT: function (a9, aa) {
+      return a9 !== aa;
+    },
+    KYnti: function (a9, aa) {
+      return a9(aa);
+    },
+    LUeIM: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonRoutePost/memberEs/taskRecord/finishTask",
+    RKWIA: function (a9, aa) {
+      return a9 !== aa;
+    },
+    lXhrD: "bMAbi",
+    kmvPt: "HtYlF",
+    AQNiT: function (a9, aa) {
+      return a9 === aa;
+    },
+    jbUfh: "IFjWO",
+    Swqwe: "HqncH",
+    BDqJR: function (a9, aa) {
+      return a9 === aa;
+    },
+    NPZbC: "BYuMm",
+    QBoMW: function (a9, aa) {
+      return a9(aa);
+    },
+    cwPTl: "bipwH",
+    DEmGI: "GlGSq",
+    siqIP: "qjvNP",
+    lpudc: "iDAgd",
+    oaQRA: "EuZhX",
+    FlluC: "dWtnN",
+    xdKqF: "broph",
+    xEFdN: "] 积分:",
+    JhdJk: "] ck已失效，用户需要去登录",
+    BgJIJ: function (a9, aa) {
+      return a9 == aa;
+    },
+    VMAFQ: "] 积分:ck已失效，用户需要去登录",
+    qLGYr: "个账号,成功",
+    QzmAh: function (a9, aa, ab) {
+      return a9(aa, ab);
+    },
+    xxQcM: function (a9, aa) {
+      return a9 !== aa;
+    },
+    WpQXf: "CwzCT",
+    ryTlA: function (a9, aa) {
+      return a9(aa);
+    },
+    KyeuU: function (a9) {
+      return a9();
+    },
+    RXKHq: "sBvEi",
+    ZTStK: function (a9, aa) {
+      return a9 === aa;
+    },
+    OLIVY: function (a9, aa) {
+      return a9 !== aa;
+    },
+    huXiP: function (a9, aa) {
+      return a9 == aa;
+    },
+    UgHHO: function (a9, aa, ab) {
+      return a9(aa, ab);
+    },
+    FLOeT: function (a9, aa) {
+      return a9 + aa;
+    },
+    ivoSM: function (a9, aa) {
+      return a9 !== aa;
+    },
+    NWHMW: "hPTqD",
+    MehOd: "YDLic",
+    ZUfbd: "ESG-CEMP-CORE",
+    msHWT: function (a9, aa) {
+      return a9 == aa;
+    },
+    ldtsU: function (a9, aa) {
+      return a9 === aa;
+    },
+    WOaKU: function (a9, aa) {
+      return a9 === aa;
+    },
+    MTgWe: "vOecB",
+    PoCYk: function (a9, aa) {
+      return a9 === aa;
+    },
+    hniGR: "kFpkR",
+    KpvBs: "/token/verify",
+    yRKdM: "SYSY",
+    lrYFL: function (a9, aa) {
+      return a9 === aa;
+    },
+    EpIpX: function (a9, aa) {
+      return a9 === aa;
+    },
+    KvEzJ: "fHUiv",
+    UhSik: function (a9, aa) {
+      return a9 === aa;
+    },
+    fMaDi: "XGkIS",
+    GSNyx: "sylHQ",
+    xFdsh: function (a9, aa) {
+      return a9 !== aa;
+    },
+    oOfHZ: "sEwqq",
+    YCGsC: function (a9, aa) {
+      return a9 == aa;
+    },
+    KtvhG: function (a9, aa) {
+      return a9 === aa;
+    },
+    yJDcj: function (a9, aa) {
+      return a9 !== aa;
+    },
+    kPJJz: "PQUHw",
+    ZCnMA: "yysgK",
+    Xwxnb: "yBkPd",
+    xZUBT: "OzMPw",
+    wIfBw: function (a9) {
+      return a9();
+    },
+    uQlUY: function (a9) {
+      return a9();
+    },
+    KVejR: function (a9) {
+      return a9();
+    },
+    LHEkp: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberGoods~mallGoodsLifeService~list",
+    bdfCy: "SHTQ",
+    HAoyc: function (a9) {
+      return a9();
+    },
+    NVBUp: "STvRc",
+    VWnph: "OQQan",
+    fTFdi: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~integralTaskSignPlusService~automaticSignFetchPackage",
+    OnUQq: "SFAPP",
+    VTxcX: "JYVMu",
+    rhzNb: "Cannot call a class as a function",
+    ctMfn: "vJEfE",
+    uIptJ: "https://userone.angelgroup.com.cn",
+    eFqFV: "application/json",
+    xaPgO: "⛔️ script run error!",
+    wbhuW: function (a9, aa) {
+      return a9 === aa;
+    },
+    Fpxeb: "MquiK",
+    USyZq: function (a9) {
+      return a9();
+    },
+    ANkNw: "xdArl",
+    ZqHVs: "soijx",
+    sYygM: "hSUsR",
+    qqFVS: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberIntegral~userInfoService~queryUserInfo",
+    rXPFf: "leavePoint",
+    tjHlQ: "zeTLTYeG0bLetfRk",
+    TGLrP: "] 当前积分:",
+    IyOra: "hNsIo",
+    GCEJR: function (a9, aa) {
+      return a9 == aa;
+    },
+    WhtYl: "] 领取[",
+    NnElh: "https://ccsp-egmas.sf-express.com/cx-app-member/member/app/memberActivity/reportTask",
+    JclHB: "POINT_MALL_EXCHANGE",
+    IZoAy: "fetch",
+    yuuqe: function (a9, aa) {
+      return a9(aa);
+    },
+    KYmGk: "verify",
+    mYobc: function (a9, aa) {
+      return a9(aa);
+    },
+    eRaod: "login",
+    oOZjl: function (a9, aa) {
+      return a9(aa);
+    },
+    DYLmg: "refresh_cookie",
+    rAtSq: "getPoint",
+    zoDtq: function (a9, aa) {
+      return a9(aa);
+    },
+    YGWKG: function (a9) {
+      return a9();
+    },
+    yBqtb: "signin",
+    FAHHy: function (a9, aa) {
+      return a9(aa);
+    },
+    LdvcA: function (a9) {
+      return a9();
+    },
+    HWkKN: "getTaskList",
+    HxJpq: function (a9, aa) {
+      return a9(aa);
+    },
+    ZdHXE: function (a9, aa) {
+      return a9(aa);
+    },
+    iOsnJ: function (a9) {
+      return a9();
+    },
+    HgsPi: "reviceReward",
+    EdSUk: "reportTask",
+    yYWtJ: function (a9, aa) {
+      return a9(aa);
+    },
+    PhdNm: function (a9) {
+      return a9();
+    },
+    NaADs: function (a9) {
+      return a9();
+    },
+    rqGEN: "getCoupom",
+    cATEF: function (a9, aa) {
+      return a9(aa);
+    },
+    JdUMF: function (a9, aa, ab) {
+      return a9(aa, ab);
+    },
+    IXAgS: function (a9, aa) {
+      return a9 == aa;
+    },
+    Dbqll: "获取token失败！参数缺失",
+    TOQdO: "🎉账号[",
+    QUavI: "]更新token成功!",
+    qEGNZ: function (a9, aa) {
+      return a9(aa);
+    },
+    JfEBF: "no available accounts found",
+    zJHkI: " 个账号\n",
+    gsvFh: function (a9, aa) {
+      return a9 > aa;
+    },
+    Ancah: "------------\n",
+    CgfNb: "debug error => t=",
+    ECJWu: "当前请求已超时",
+    qlyew: function (a9, aa, ab) {
+      return a9(aa, ab);
+    },
+    eBxEz: function (a9, aa) {
+      return a9 == aa;
+    },
+    hRlmW: "form",
+    Tyfpy: function (a9, aa) {
+      return a9 == aa;
+    },
+    NrggF: function (a9, aa) {
+      return a9 + aa;
+    },
+    clZfW: function (a9, aa) {
+      return a9 / aa;
+    },
+    sIrmQ: "application/json;charset=UTF-8",
+    vjWaB: function (a9, aa) {
+      return a9 === aa;
+    },
+    mvbJJ: function (a9) {
+      return a9();
+    },
+    fhywl: function (a9) {
+      return a9();
+    },
+    mpgei: function (a9) {
+      return a9();
+    },
+    XZzdY: "XZXXN",
+    VpHcI: "XZXXNSERVER",
+    tYChi: "https://dalaoshi.xn--ug8h.eu.org",
+    SbqcF: "sfsy_data",
+    IecZz: "is_debug",
+    Kimxe: "false",
+    JfKus: "完成连签7天",
+    zHbqX: "参与积分活动",
+    NqZnW: "每月累计寄件",
+    JyGgf: "完成每月任务",
+    PKtgk: "去新增一个收件偏好",
+    VTTJB: "用行业模板寄件下单",
+    Yrpbb: "用积分兑任意礼品",
+    EWUSI: "设置你的顺丰ID"
   };
-function getTimestampYYYYMMDDHHmmss() {
-  let _0x2b05be = new Date();
-  var _0x58b827 = _0x2b05be.getFullYear(),
-    _0x2e6698 = _0x2b05be.getMonth() + 1,
-    _0x56456d = _0x2b05be.getDate(),
-    _0x37d546 = _0x2b05be.getHours(),
-    _0x4c835f = _0x2b05be.getMinutes(),
-    _0x3b49be = _0x2b05be.getSeconds();
-  _0x2e6698 < 10 && (_0x2e6698 = "0" + _0x2e6698);
-  _0x56456d < 10 && (_0x56456d = "0" + _0x56456d);
-  _0x37d546 < 10 && (_0x37d546 = "0" + _0x37d546);
-  _0x4c835f < 10 && (_0x4c835f = "0" + _0x4c835f);
-  _0x3b49be < 10 && (_0x3b49be = "0" + _0x3b49be);
-  let _0x21a6e0 = _0x58b827 + "" + _0x2e6698 + "" + _0x56456d + "" + _0x37d546 + "" + _0x4c835f + "" + _0x3b49be;
-  return _0x21a6e0;
-}
-function formatDateTime(_0x33f359, _0x2994d3 = null) {
-  const _0xe9110d = _0x2994d3 ? new Date(_0x2994d3) : new Date();
-  let _0x1737b2 = {
-    "M+": _0xe9110d.getMonth() + 1,
-    "d+": _0xe9110d.getDate(),
-    "H+": _0xe9110d.getHours(),
-    "m+": _0xe9110d.getMinutes(),
-    "s+": _0xe9110d.getSeconds(),
-    "q+": Math.floor((_0xe9110d.getMonth() + 3) / 3),
-    "S": _0xe9110d.getMilliseconds()
-  };
-  /(y+)/.test(_0x33f359) && (_0x33f359 = _0x33f359.replace(RegExp.$1, (_0xe9110d.getFullYear() + "").substr(4 - RegExp.$1.length)));
-  for (let _0x59c7b8 in _0x1737b2) {
-    new RegExp("(" + _0x59c7b8 + ")").test(_0x33f359) && (_0x33f359 = _0x33f359.replace(RegExp.$1, 1 == RegExp.$1.length ? _0x1737b2[_0x59c7b8] : ("00" + _0x1737b2[_0x59c7b8]).substr(("" + _0x1737b2[_0x59c7b8]).length)));
+  function q(a9) {
+    q = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (ac) {
+      return typeof ac;
+    } : function (ac) {
+      {
+        return ac && "function" == typeof Symbol && ac.constructor === Symbol && ac !== Symbol.prototype ? "symbol" : typeof ac;
+      }
+    };
+    return q(a9);
   }
-  return _0x33f359;
-}
-function maskPhoneNumber(_0x59d36b) {
-  return _0x59d36b.replace(/^(\d{3})(\d*)(\d{4})$/, "$1****$3");
-}
-function sleep(_0x1a24ea) {
-  return new Promise(function (_0x2053fc) {
-    mySetTimeout(_0x2053fc, _0x1a24ea);
-  });
-}
-function getTimestampFormatted() {
-  let _0x16bcbf = new Date();
-  var _0x7dd302 = _0x16bcbf.getFullYear(),
-    _0xbe7a50 = _0x16bcbf.getMonth() + 1,
-    _0x3b69e8 = _0x16bcbf.getDate(),
-    _0x4152a0 = _0x16bcbf.getHours(),
-    _0x1a7f29 = _0x16bcbf.getMinutes(),
-    _0x1cd755 = _0x16bcbf.getSeconds();
-  _0xbe7a50 < 10 && (_0xbe7a50 = "0" + _0xbe7a50);
-  _0x3b69e8 < 10 && (_0x3b69e8 = "0" + _0x3b69e8);
-  if (_0x4152a0 < 10) {
-    _0x4152a0 = "0" + _0x4152a0;
-  }
-  _0x1a7f29 < 10 && (_0x1a7f29 = "0" + _0x1a7f29);
-  if (_0x1cd755 < 10) {
-    _0x1cd755 = "0" + _0x1cd755;
-  }
-  let _0x2a6510 = _0x7dd302 + "-" + _0xbe7a50 + "-" + _0x3b69e8 + " " + _0x4152a0 + ":" + _0x1a7f29 + ":" + _0x1cd755;
-  return _0x2a6510;
-}
-function generateRandomString(_0x2caaf3) {
-  var _0x3ba981 = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
-    _0x1df941 = "";
-  for (var _0x571495 = _0x2caaf3; _0x571495 > 0; --_0x571495) {
-    _0x1df941 += _0x3ba981[Math.floor(Math.random() * _0x3ba981.length)];
-  }
-  return _0x1df941;
-}
-async function sendMsg(_0xaf90d, _0x41496d) {
-  try {
+  function z(a9) {
     {
-      console.log("📤 准备推送消息到钉钉机器人");
-      const _0x1fc18e = process.env.dingtalkBotToken || "",
-        _0x2eeaa8 = process.env.dingtalkBotSecret || "";
-      if (!_0x1fc18e) {
+      return function (ab) {
         {
-          console.log("❌ 未设置钉钉机器人Token，无法推送消息");
-          return;
+          if (Array.isArray(ab)) {
+            return D(ab);
+          }
+        }
+      }(a9) || function (ab) {
+        {
+          if ("undefined" != typeof Symbol && null != ab[Symbol.iterator] || null != ab["@@iterator"]) {
+            return Array.from(ab);
+          }
+        }
+      }(a9) || C(a9) || function () {
+        {
+          throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+        }
+      }();
+    }
+  }
+  function A(a9, aa) {
+    {
+      var ac = "undefined" != typeof Symbol && a9[Symbol.iterator] || a9["@@iterator"];
+      if (!ac) {
+        {
+          if (Array.isArray(a9) || (ac = C(a9)) || aa && a9 && "number" == typeof a9.length) {
+            {
+              ac && (a9 = ac);
+              var ad = 0;
+              var ae = function () {};
+              return {
+                s: ae,
+                n: function () {
+                  {
+                    var ak = {
+                      done: true
+                    };
+                    return ad >= a9.length ? ak : {
+                      done: false,
+                      value: a9[ad++]
+                    };
+                  }
+                },
+                e: function (aj) {
+                  {
+                    throw aj;
+                  }
+                },
+                f: ae
+              };
+            }
+          }
+          throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
         }
       }
-      if (!_0x2eeaa8) {
-        console.log("❌ 未设置钉钉机器人Secret，无法推送消息");
-        return;
-      }
-      const _0x15557c = Date.now(),
-        _0x39862d = _0x15557c + "\n" + _0x2eeaa8,
-        _0x22e040 = crypto.createHmac("sha256", _0x2eeaa8).update(_0x39862d).digest("base64"),
-        _0x421b08 = encodeURIComponent(_0x22e040),
-        _0x4bcf1b = "https://oapi.dingtalk.com/robot/send?access_token=" + _0x1fc18e + "&timestamp=" + _0x15557c + "&sign=" + _0x421b08,
-        _0x1fe6ba = {
-          "msgtype": "markdown",
-          "markdown": {
-            "title": "星播客中奖通知",
-            "text": _0xaf90d
-          },
-          "at": {
-            "isAtAll": false
+      var af;
+      var ag = true;
+      var ah = false;
+      return {
+        s: function () {
+          {
+            ac = ac.call(a9);
           }
         },
-        _0x5b23eb = {
-          "url": _0x4bcf1b,
-          "method": "post",
-          "headers": {
-            "Content-Type": "application/json"
-          },
-          "data": _0x1fe6ba,
-          "timeout": 10000
+        n: function () {
+          {
+            var am = ac.next();
+            ag = am.done;
+            return am;
+          }
         },
-        _0xac37b8 = await axios(_0x5b23eb);
-      console.log("📤 钉钉消息推送结果: " + (_0xac37b8.data.errcode === 0 ? "成功" : "失败"));
-      _0xac37b8.data.errcode !== 0 && console.log("❌ 推送失败详情:", _0xac37b8.data.errmsg);
-      return _0xac37b8.data;
-    }
-  } catch (_0x22000d) {
-    {
-      console.error("❌ 钉钉消息推送失败:", _0x22000d.message);
-      throw _0x22000d;
-    }
-  }
-}
-async function loginPhone(_0x39ba84, _0xcdebb6, _0x12f891, _0x4d0603 = false) {
-  try {
-    decrypt.setPrivateKey(pubKey);
-    let _0x27c9a6 = getTimestampYYYYMMDDHHmmss(),
-      _0x1290b7 = generateRandomString(16),
-      _0x3d4244 = decrypt.encrypt("iPhone 14 15.4." + _0x1290b7.substring(0, 12) + _0x39ba84 + _0x27c9a6 + _0xcdebb6 + "0$$$0."),
-      _0x1d491c = "";
-    for (let _0x11e288 of _0x39ba84) {
-      {
-        if (_0x11e288 <= 7) _0x1d491c += String(Number(_0x11e288) + 2);else {
-          _0x11e288 == 8 ? _0x1d491c += ":" : _0x11e288 == 9 && (_0x1d491c += ";");
-        }
-      }
-    }
-    const _0x45502d = {
-      "code": "userLoginNormal",
-      "timestamp": _0x27c9a6,
-      "broadAccount": "",
-      "broadToken": "",
-      "clientType": "#10.5.0#channel50#iPhone 14 Pro Max#",
-      "shopId": "20002",
-      "source": "110003",
-      "sourcePassword": "Sid98s",
-      "token": "",
-      "userLoginName": _0x1d491c
-    };
-    let _0x35b5a7 = {
-      "headerInfos": _0x45502d,
-      "content": {
-        "attach": "test",
-        "fieldData": {
-          "loginType": "4",
-          "accountType": "",
-          "loginAuthCipherAsymmertric": _0x3d4244,
-          "deviceUid": _0x1290b7,
-          "phoneNum": _0x1d491c,
-          "isChinatelecom": "0",
-          "systemVersion": "15.4.0",
-          "authentication": Array.from(_0xcdebb6).map(_0x1c5850 => String.fromCharCode(_0x1c5850.charCodeAt(0) + 2)).join("")
-        }
-      }
-    };
-    if (!_0x12f891 || _0x4d0603) {
-      const _0x112699 = {
-        "url": "https://appgologin.189.cn:9031/login/client/userLoginNormal",
-        "method": "POST",
-        "data": _0x35b5a7
-      };
-      let _0x4372dc = await axios(_0x112699);
-      try {
-        {
-          const _0x196134 = {
-            ..._0x4372dc.data.responseData.data.loginSuccessResult
-          };
-          _0x12f891 = _0x196134;
-        }
-      } catch (_0x1c34c4) {
-        return false;
-      }
-    }
-    const _0x54f37f = {
-      ..._0x12f891
-    };
-    let _0x473d8b = _0x54f37f,
-      _0x6693c8 = _0x12f891.token,
-      _0x40e603 = _0x12f891.userId;
-    _0x27c9a6 = getTimestampYYYYMMDDHHmmss();
-    _0x35b5a7 = "<Request>\n                                <HeaderInfos>\n                                    <Code>getSingle</Code>\n                                    <Timestamp>" + _0x27c9a6 + "</Timestamp>\n                                    <BroadAccount></BroadAccount>\n                                    <BroadToken></BroadToken>\n                                    <ClientType>#9.6.1#channel50#iPhone 14 Pro Max#</ClientType>\n                                    <ShopId>20002</ShopId>\n                                    <Source>110003</Source>\n                                    <SourcePassword>Sid98s</SourcePassword>\n                                    <Token>" + _0x6693c8 + "</Token>\n                                    <UserLoginName>" + _0x39ba84 + "</UserLoginName>\n                                </HeaderInfos>\n                                <Content>\n                                    <Attach>test</Attach>\n                                    <FieldData>\n                                        <TargetId>" + encryptRequest("1234567`90koiuyhgtfrdewsaqaqsqde", "", _0x40e603) + "</TargetId>\n                                        <Url>4a6862274835b451</Url>\n                                    </FieldData>\n                                </Content>\n                    </Request>";
-    const _0x4666e2 = {
-      "url": "https://appgologin.189.cn:9031/map/clientXML",
-      "method": "post",
-      "data": _0x35b5a7,
-      "headers": {}
-    };
-    _0x4666e2.headers["Content-Type"] = "application/xml;charset=utf-8";
-    let _0x3036e9 = await axios(_0x4666e2);
-    if (String(_0x3036e9.data).includes("过期") || String(_0x3036e9.data).includes("校验错误")) return await loginPhone(_0x39ba84, _0xcdebb6, _0x12f891, true);
-    let _0x258f84 = _0x3036e9.data.split("<Ticket>")[1].split("</Ticket>")[0],
-      _0x15f6e8 = decryptRequest("1234567`90koiuyhgtfrdewsaqaqsqde", "", _0x258f84);
-    _0x473d8b.uid = _0x15f6e8;
-    _0x473d8b.password = _0xcdebb6;
-    _0x473d8b.phoneNbr = _0x39ba84;
-    return _0x473d8b;
-  } catch (_0x497f99) {
-    return false;
-  }
-}
-async function loginPhoneWithCache(_0x28971e, _0x2ba9ee, _0x19b73c, _0x17a672 = "./Cache.json", _0x6cea2d = false) {
-  try {
-    decrypt.setPrivateKey(pubKey);
-    let _0xa3732a = getTimestampYYYYMMDDHHmmss(),
-      _0x1ef06c = generateRandomString(16),
-      _0x511a85 = decrypt.encrypt("iPhone 14 15.4." + _0x1ef06c.substring(0, 12) + _0x28971e + _0xa3732a + _0x2ba9ee + "0$$$0."),
-      _0x551c33 = "";
-    for (let _0x5eefb6 of _0x28971e) {
-      {
-        if (_0x5eefb6 <= 7) {
-          _0x551c33 += String(Number(_0x5eefb6) + 2);
-        } else _0x5eefb6 == 8 ? _0x551c33 += ":" : _0x5eefb6 == 9 && (_0x551c33 += ";");
-      }
-    }
-    const _0x4b8ccb = {
-      "code": "userLoginNormal",
-      "timestamp": _0xa3732a,
-      "broadAccount": "",
-      "broadToken": "",
-      "clientType": "#10.5.0#channel50#iPhone 14 Pro Max#",
-      "shopId": "20002",
-      "source": "110003",
-      "sourcePassword": "Sid98s",
-      "token": "",
-      "userLoginName": _0x551c33
-    };
-    let _0x1f5a5e = {
-      "headerInfos": _0x4b8ccb,
-      "content": {
-        "attach": "test",
-        "fieldData": {
-          "loginType": "4",
-          "accountType": "",
-          "loginAuthCipherAsymmertric": _0x511a85,
-          "deviceUid": _0x1ef06c,
-          "phoneNum": _0x551c33,
-          "isChinatelecom": "0",
-          "systemVersion": "15.4.0",
-          "authentication": Array.from(_0x2ba9ee).map(_0x575718 => String.fromCharCode(_0x575718.charCodeAt(0) + 2)).join("")
-        }
-      }
-    };
-    if (!_0x19b73c[_0x28971e] || _0x6cea2d) {
-      {
-        const _0x23a42b = {
-          "url": "https://appgologin.189.cn:9031/login/client/userLoginNormal",
-          "method": "POST",
-          "data": _0x1f5a5e
-        };
-        let _0x1b0a5e = await axios(_0x23a42b);
-        const _0x4678ab = {
-          ..._0x1b0a5e.data.responseData.data.loginSuccessResult
-        };
-        _0x19b73c[_0x28971e] = _0x4678ab;
-        console.log("写入缓存成功");
-      }
-    }
-    const _0x3f827f = {
-      ..._0x19b73c[_0x28971e]
-    };
-    let _0x310353 = _0x3f827f;
-    fs.writeFileSync(_0x17a672, JSON.stringify(_0x19b73c, null, 4), "utf8");
-    let _0x1919be = _0x19b73c[_0x28971e].token,
-      _0x2b079b = _0x19b73c[_0x28971e].userId;
-    _0xa3732a = getTimestampYYYYMMDDHHmmss();
-    _0x1f5a5e = "<Request>\n\t\t\t\t\t\t\t<HeaderInfos>\n\t\t\t\t\t\t\t\t<Code>getSingle</Code>\n\t\t\t\t\t\t\t\t<Timestamp>" + _0xa3732a + "</Timestamp>\n\t\t\t\t\t\t\t\t<BroadAccount></BroadAccount>\n\t\t\t\t\t\t\t\t<BroadToken></BroadToken>\n\t\t\t\t\t\t\t\t<ClientType>#9.6.1#channel50#iPhone 14 Pro Max#</ClientType>\n\t\t\t\t\t\t\t\t<ShopId>20002</ShopId>\n\t\t\t\t\t\t\t\t<Source>110003</Source>\n\t\t\t\t\t\t\t\t<SourcePassword>Sid98s</SourcePassword>\n\t\t\t\t\t\t\t\t<Token>" + _0x1919be + "</Token>\n\t\t\t\t\t\t\t\t<UserLoginName>" + _0x28971e + "</UserLoginName>\n\t\t\t\t\t\t\t</HeaderInfos>\n\t\t\t\t\t\t\t<Content>\n\t\t\t\t\t\t\t\t<Attach>test</Attach>\n\t\t\t\t\t\t\t\t<FieldData>\n\t\t\t\t\t\t\t\t\t<TargetId>" + encryptRequest("1234567`90koiuyhgtfrdewsaqaqsqde", "", _0x2b079b) + "</TargetId>\n\t\t\t\t\t\t\t\t\t<Url>4a6862274835b451</Url>\n\t\t\t\t\t\t\t\t</FieldData>\n\t\t\t\t\t\t\t</Content>\n\t\t\t\t</Request>";
-    const _0x422d5a = {
-      "url": "https://appgologin.189.cn:9031/map/clientXML",
-      "method": "post",
-      "data": _0x1f5a5e,
-      "headers": {}
-    };
-    _0x422d5a.headers["Content-Type"] = "application/xml;charset=utf-8";
-    let _0x29587a = await axios(_0x422d5a);
-    if (String(_0x29587a.data).includes("过期") || String(_0x29587a.data).includes("校验错误")) return await loginPhone(_0x28971e, _0x2ba9ee, _0x19b73c, _0x17a672, true);
-    let _0x54a732 = _0x29587a.data.split("<Ticket>")[1].split("</Ticket>")[0],
-      _0x3925c8 = decryptRequest("1234567`90koiuyhgtfrdewsaqaqsqde", "", _0x54a732);
-    _0x310353.uid = _0x3925c8;
-    _0x310353.password = _0x2ba9ee;
-    return _0x310353;
-  } catch (_0x315d94) {
-    console.log(_0x315d94);
-    return false;
-  }
-}
-let keyContent = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDIPOHtjs6p4sTlpFvrx+ESsYkEvyT4JB/dcEbU6C8+yclpcmWEvwZFymqlKQq89laSH4IxUsPJHKIOiYAMzNibhED1swzecH5XLKEAJclopJqoO95o8W63Euq6K+AKMzyZt1SEqtZ0mXsN8UPnuN/5aoB3kbPLYpfEwBbhto6yrwIDAQAB",
-  resKey = "-----BEGIN PUBLIC KEY-----\n" + keyContent + "\n-----END PUBLIC KEY-----",
-  rsaJiami = new nodeRsa(resKey);
-const rsaOptions = {
-  "encryptionScheme": "pkcs1"
-};
-rsaJiami.setOptions(rsaOptions);
-function retryDecorator(_0xfefdcf = 3, _0x484385 = 1000) {
-  return function (_0x569d32) {
-    return async function (..._0x5561b6) {
-      let _0x5692ef;
-      for (let _0x4052f8 = 0; _0x4052f8 < _0xfefdcf; _0x4052f8++) {
-        try {
-          return await _0x569d32.apply(this, _0x5561b6);
-        } catch (_0x24981a) {
-          _0x5692ef = _0x24981a;
-          console.log("⚠️ 方法 " + (_0x569d32.name || "anonymous") + " 第 " + (_0x4052f8 + 1) + " 次重试, 错误: " + _0x24981a.message);
-          await new Promise(_0x409f9a => setTimeout(_0x409f9a, _0x484385 * (_0x4052f8 + 1)));
-        }
-      }
-      throw _0x5692ef;
-    };
-  };
-}
-async function getUserCode(_0x4fbab2) {
-  console.log("🔑 开始获取usercode（ticket: " + _0x4fbab2.substring(0, 8) + "...）");
-  return retryDecorator(5, 2000)(getUserCodeImpl).call(this, _0x4fbab2);
-}
-async function getUserCodeImpl(_0xb7e8c5) {
-  const _0x25d2a4 = {
-    "method": "get",
-    "url": "https://xbk.189.cn/xbkapi/api/auth/jump",
-    "params": {},
-    "headers": {}
-  };
-  _0x25d2a4.params.userID = _0xb7e8c5;
-  _0x25d2a4.params.version = "10.5.0";
-  _0x25d2a4.params.type = "room";
-  _0x25d2a4.params.l = "renwu";
-  _0x25d2a4.headers["User-Agent"] = "Mozilla/5.0 (Linux; U; Android 12; zh-cn; ONEPLUS A9000 Build/QKQ1.190716.003) AppleWebKit/533.1 (KHTML, like Gecko) Version/5.0 Mobile Safari/533.1";
-  let _0xd7e781 = await axios(_0x25d2a4),
-    _0x2a5618 = _0xd7e781.request.path,
-    _0x195e7e = _0x2a5618.split("?")[1].split("&"),
-    _0x47850b = "";
-  _0x195e7e.map(_0x22c70c => {
-    _0x22c70c.split("=")[0] == "usercode" && (_0x47850b = _0x22c70c.split("=")[1]);
-  });
-  console.log("✅ 获取usercode成功（usercode: " + _0x47850b.substring(0, 8) + "...）");
-  return _0x47850b;
-}
-async function getAccessToken(_0x32610b) {
-  console.log("🔑 开始获取token（usercode: " + _0x32610b.substring(0, 8) + "...）");
-  return retryDecorator(5, 2000)(getAccessTokenImpl).call(this, _0x32610b);
-}
-async function getAccessTokenImpl(_0x437420) {
-  const _0x288ba5 = {
-      "usercode": _0x437420
-    },
-    _0x4dcd10 = {
-      "method": "post",
-      "url": "https://xbk.189.cn/xbkapi/api/auth/userinfo/codeToken",
-      "data": _0x288ba5
-    };
-  let _0x4182e8 = await axios(_0x4dcd10);
-  console.log("✅ 获取token成功（token: " + _0x4182e8.data.data.token.substring(0, 8) + "...）");
-  return _0x4182e8.data.data.token;
-}
-const provinceList = [{
-  "code": 1,
-  "name": "北京"
-}, {
-  "code": 2,
-  "name": "天津"
-}, {
-  "code": 3,
-  "name": "河北"
-}, {
-  "code": 4,
-  "name": "山西"
-}, {
-  "code": 5,
-  "name": "内蒙古"
-}, {
-  "code": 6,
-  "name": "辽宁"
-}, {
-  "code": 7,
-  "name": "吉林"
-}, {
-  "code": 8,
-  "name": "黑龙江"
-}, {
-  "code": 9,
-  "name": "上海"
-}, {
-  "code": 10,
-  "name": "江苏"
-}, {
-  "code": 11,
-  "name": "浙江"
-}, {
-  "code": 12,
-  "name": "安徽"
-}, {
-  "code": 13,
-  "name": "福建"
-}, {
-  "code": 14,
-  "name": "江西"
-}, {
-  "code": 15,
-  "name": "山东"
-}, {
-  "code": 16,
-  "name": "河南"
-}, {
-  "code": 17,
-  "name": "湖北"
-}, {
-  "code": 18,
-  "name": "湖南"
-}, {
-  "code": 19,
-  "name": "广东"
-}, {
-  "code": 20,
-  "name": "广西"
-}, {
-  "code": 21,
-  "name": "海南"
-}, {
-  "code": 22,
-  "name": "重庆"
-}, {
-  "code": 23,
-  "name": "四川"
-}, {
-  "code": 24,
-  "name": "贵州"
-}, {
-  "code": 25,
-  "name": "云南"
-}, {
-  "code": 26,
-  "name": "西藏"
-}, {
-  "code": 27,
-  "name": "陕西"
-}, {
-  "code": 28,
-  "name": "甘肃"
-}, {
-  "code": 29,
-  "name": "青海"
-}, {
-  "code": 30,
-  "name": "宁夏"
-}, {
-  "code": 31,
-  "name": "新疆"
-}];
-let liveListAll = [],
-  pushArr = {},
-  sendTxt = {},
-  runGameId = [],
-  isStart = false,
-  isScanning = false,
-  newLiveRooms = [];
-async function scanNewLiveRooms(_0x3f650c) {
-  if (isScanning) return console.log("🔄 扫描正在进行中，跳过本次扫描"), [];
-  isScanning = true;
-  console.log("🔄 开始扫描新直播间...");
-  try {
-    const _0x50cc42 = [],
-      _0x21cfa2 = new Date().valueOf(),
-      _0x25f7fb = getRandomProvinces(5);
-    for (const _0x4d5c4e of _0x25f7fb) {
-      {
-        console.log("🔍 扫描省份: " + _0x4d5c4e.name);
-        try {
-          const _0x56b9ee = await getProvinceLiveRooms(_0x4d5c4e.code, _0x3f650c);
-          for (const _0x5f1954 of _0x56b9ee) {
-            const _0x52ad28 = new Date(_0x5f1954.liveStartTime.replace(/-/g, "/")).valueOf();
-            if (_0x21cfa2 - _0x52ad28 < 7200000) {
+        e: function (al) {
+          ah = true;
+          af = al;
+        },
+        f: function () {
+          {
+            try {
               {
-                const _0x58ee07 = liveListAll.some(_0x158c03 => _0x158c03.liveId === _0x5f1954.liveId);
-                !_0x58ee07 && (_0x5f1954.provinceName = _0x4d5c4e.name, _0x50cc42.push(_0x5f1954), console.log("🎯 发现新直播间: " + _0x4d5c4e.name + "-" + _0x5f1954.title + " (ID: " + _0x5f1954.liveId + ")"));
+                ag || null == ac.return || ac.return();
+              }
+            } finally {
+              {
+                if (ah) {
+                  throw af;
+                }
               }
             }
           }
-          await sleep(2000);
-        } catch (_0x144bc3) {
-          console.error("❌ 扫描省份 " + _0x4d5c4e.name + " 失败:", _0x144bc3.message);
+        }
+      };
+    }
+  }
+  function B(a9, aa) {
+    {
+      return function (ad) {
+        {
+          if (Array.isArray(ad)) {
+            return ad;
+          }
+        }
+      }(a9) || function (ad, ae) {
+        {
+          var ag = null == ad ? null : "undefined" != typeof Symbol && ad[Symbol.iterator] || ad["@@iterator"];
+          if (null != ag) {
+            {
+              var ah;
+              var ai;
+              var aj;
+              var ak;
+              var al = [];
+              var am = true;
+              var an = false;
+              try {
+                {
+                  if (aj = (ag = ag.call(ad)).next, 0 === ae) {
+                    {
+                      if (Object(ag) !== ag) {
+                        return;
+                      }
+                      am = false;
+                    }
+                  } else {
+                    for (; !(am = (ah = aj.call(ag)).done) && (al.push(ah.value), al.length !== ae); am = true) {}
+                  }
+                }
+              } catch (ar) {
+                {
+                  an = true;
+                  ai = ar;
+                }
+              } finally {
+                {
+                  try {
+                    {
+                      if (!am && null != ag.return && (ak = ag.return(), Object(ak) !== ak)) {
+                        return;
+                      }
+                    }
+                  } finally {
+                    {
+                      if (an) {
+                        throw ai;
+                      }
+                    }
+                  }
+                }
+              }
+              return al;
+            }
+          }
+        }
+      }(a9, aa) || C(a9, aa) || function () {
+        {
+          throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+        }
+      }();
+    }
+  }
+  function C(a9, aa) {
+    {
+      if (a9) {
+        {
+          if ("string" == typeof a9) {
+            return D(a9, aa);
+          }
+          var ac = {}.toString.call(a9).slice(8, -1);
+          "Object" === ac && a9.constructor && (ac = a9.constructor.name);
+          return "Map" === ac || "Set" === ac ? Array.from(a9) : "Arguments" === ac || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(ac) ? D(a9, aa) : undefined;
         }
       }
     }
-    console.log("🔄 扫描完成，发现 " + _0x50cc42.length + " 个新直播间");
-    return _0x50cc42;
-  } catch (_0x125de7) {
-    console.error("❌ 扫描新直播间失败:", _0x125de7.message);
-    return [];
-  } finally {
-    isScanning = false;
   }
-}
-function getRandomProvinces(_0x577214) {
-  const _0x4f5700 = [...provinceList].sort(() => 0.5 - Math.random());
-  return _0x4f5700.slice(0, _0x577214);
-}
-async function getProvinceLiveRooms(_0x1a027d, _0x225014) {
-  try {
-    const _0x44677b = {
-        "method": "get",
-        "url": "https://xbk.189.cn/xbkapi/api/room/index/floor?provinceCode=" + (_0x1a027d < 10 ? "0" + _0x1a027d : _0x1a027d) + "&pageType=1&page=1&khd=1",
-        "headers": {
-          "User-Agent": "Mozilla/5.0 (Linux; U; Android 12; zh-cn; ONEPLUS A9000 Build/QKQ1.190716.003) AppleWebKit/533.1 (KHTML, like Gecko) Version/5.0 Mobile Safari/533.1",
-          "Authorization": "Bearer " + rsaJiami.encrypt(_0x225014, "base64")
-        },
-        "timeout": 10000,
-        "validateStatus": function (_0x1b8c32) {
-          return _0x1b8c32 < 500;
-        }
-      },
-      _0x925899 = await axios(_0x44677b);
-    if (_0x925899.data && _0x925899.data.data) return _0x925899.data.data.filter(_0x257f94 => _0x257f94.liveType == 2 || _0x257f94.liveType == 1);
-    return [];
-  } catch (_0x1ce557) {
-    console.error("❌ 获取省份 " + _0x1a027d + " 直播间失败:", _0x1ce557.message);
-    return [];
-  }
-}
-async function getGoodsList(_0x42a19f, _0x31dbc2, _0x21f1af) {
-  console.log("🛒 获取直播间商品：liveId=" + _0x42a19f + "，第" + _0x31dbc2 + "页");
-  return retryDecorator(3, 3000)(getGoodsListImpl).call(this, _0x42a19f, _0x31dbc2, _0x21f1af);
-}
-async function getGoodsListImpl(_0x2cd05e, _0x43f2c2, _0x3116ee) {
-  try {
+  function D(a9, aa) {
     {
-      const _0x14d975 = {
-        "method": "get",
-        "url": "https://xbk.189.cn/xbkapi/lteration/room/getLiveGoodsList",
-        "params": {
-          "liveId": _0x2cd05e,
-          "list_type": "ordinary",
-          "page": _0x43f2c2
-        },
-        "headers": {
-          "User-Agent": "Mozilla/5.0 (Linux; U; Android 12; zh-cn; ONEPLUS A9000 Build/QKQ1.190716.003) AppleWebKit/533.1 (KHTML, like Gecko) Version/5.0 Mobile Safari/533.1",
-          "Authorization": "Bearer " + rsaJiami.encrypt(_0x3116ee, "base64")
-        },
-        "timeout": 15000,
-        "validateStatus": function (_0x4d41c3) {
-          return _0x4d41c3 < 500;
-        }
-      };
-      let _0x41a228 = await axios(_0x14d975);
-      if (_0x41a228.data) {
-        if (_0x41a228.data.code === 200) {
-          const _0x4280dd = _0x41a228.data?.["data"]?.["count"] || 0,
-            _0x3f8950 = _0x41a228.data?.["data"]?.["list"] || [];
-          console.log("🛒 直播间商品获取成功: liveId=" + _0x2cd05e + ", 第" + _0x43f2c2 + "页, 返回" + _0x3f8950.length + "个商品, 总计" + _0x4280dd + "个");
-          return _0x41a228.data;
-        } else return _0x41a228.data.code === 0 ? (console.log("⚠️ 直播间商品接口返回code=0: liveId=" + _0x2cd05e + ", 可能该直播间无商品或接口限制"), {
-          "data": {
-            "count": 0,
-            "list": []
-          }
-        }) : (console.log("⚠️ 直播间商品接口返回异常: liveId=" + _0x2cd05e + ", code=" + _0x41a228.data.code + ", msg=" + _0x41a228.data.msg), {
-          "data": {
-            "count": 0,
-            "list": []
-          }
-        });
-      } else return console.log("⚠️ 直播间商品接口返回数据为空: liveId=" + _0x2cd05e), {
-        "data": {
-          "count": 0,
-          "list": []
-        }
-      };
-    }
-  } catch (_0x525593) {
-    {
-      if (_0x525593.response && _0x525593.response.status === 429) {
-        console.log("⏳ 请求频率限制，等待后重试: liveId=" + _0x2cd05e);
-        await sleep(10000);
-        throw _0x525593;
+      (null == aa || aa > a9.length) && (aa = a9.length);
+      for (var ac = 0, ad = Array(aa); ac < aa; ac++) {
+        ad[ac] = a9[ac];
       }
-      console.error("❌ 获取直播间商品列表失败: liveId=" + _0x2cd05e + ", page=" + _0x43f2c2, _0x525593.message);
-      return {
-        "data": {
-          "count": 0,
-          "list": []
-        }
-      };
+      return ad;
     }
   }
-}
-async function getCaptchaImage() {
-  console.log("📷 开始获取验证码图片");
-  return retryDecorator(5, 1000)(getCaptchaImageImpl).call(this);
-}
-async function getCaptchaImageImpl() {
-  const _0x4bf3b7 = v4(),
-    _0x4b442c = {
-      "url": "https://xbk.189.cn/xbkapi/api/auth/captcha?guid=" + _0x4bf3b7,
-      "method": "GET",
-      "responseType": "arraybuffer"
-    };
-  let _0x8b0f32 = await axios(_0x4b442c);
-  const _0xda5d37 = Buffer.from(_0x8b0f32.data, "binary").toString("base64");
-  console.log("📷 验证码图片获取成功");
-  return {
-    "file": _0x8b0f32.data,
-    "base64": "data:image/png;base64," + _0xda5d37,
-    "uuid": _0x4bf3b7
-  };
-}
-async function recognizeCaptcha() {
-  console.log("🔍 开始识别验证码");
-  return retryDecorator(5, 1000)(recognizeCaptchaImpl).call(this);
-}
-async function recognizeCaptchaImpl() {
-  let _0x45f620 = await getCaptchaImage();
-  const _0x1e5263 = process?.["env"]?.["dxocr"] || "http://45.15.124.106:7777/";
-  console.log("🔍从环境变量dxocr获取OCR服务URL，如果没有设置则默认使用我的！");
-  const _0xdee148 = {
-      "image": _0x45f620.base64
-    },
-    _0x2eea4 = {
-      "url": "" + _0x1e5263,
-      "method": "post",
-      "headers": {},
-      "data": _0xdee148
-    };
-  _0x2eea4.headers["Content-Type"] = "application/x-www-form-urlencoded";
-  let _0x551969 = await axios(_0x2eea4);
-  if (_0x551969.data.code == 200) {
-    let _0x548a38 = _0x551969.data.data,
-      _0x5db2bf = _0x548a38.split("="),
-      _0x5c17ec = "";
-    if (_0x5db2bf.length > 1) {
-      _0x5c17ec = _0x5db2bf[0];
-    } else _0x5c17ec = _0x548a38.split("x")[0] + "+" + _0x548a38.split("x")[1];
-    let _0x4398e4 = eval("" + _0x5c17ec);
-    console.log("🔍 验证码识别成功：计算结果=" + _0x4398e4);
-    const _0x25d0ba = {
-      "data": _0x4398e4,
-      "uuid": _0x45f620.uuid
-    };
-    return _0x25d0ba;
-  }
-  throw new Error("OCR识别失败");
-}
-async function doLottery(_0x1dd948, _0x3bea7c, _0x49f74f, _0x529ac8, _0x388de8) {
-  console.log("🎰 开始抽奖：liveId=" + _0x1dd948 + "，active_code=" + _0x3bea7c + "，手机号=" + maskPhoneNumber(_0x529ac8));
-  try {
-    let _0x2728b7 = await recognizeCaptcha();
-    const _0x3e1b69 = {
-      "active_code": _0x3bea7c,
-      "captcha": _0x2728b7.data,
-      "guid": _0x2728b7.uuid,
-      "liveId": _0x1dd948,
-      "period": "1"
-    };
-    let _0x4b6ec9 = {
-        "method": "post",
-        "url": "https://xbk.189.cn/xbkapi/active/v2/lottery/do",
-        "headers": {
-          "User-Agent": "Mozilla/5.0 (Linux; U; Android 12; zh-cn; ONEPLUS A9000 Build/QKQ1.190716.003) AppleWebKit/533.1 (KHTML, like Gecko) Version/5.0 Mobile Safari/533.1",
-          "Authorization": "Bearer " + rsaJiami.encrypt(_0x49f74f, "base64")
-        },
-        "data": _0x3e1b69,
-        "timeout": 15000,
-        "validateStatus": function (_0x48c82f) {
-          return _0x48c82f < 500;
-        }
+  function F() {
+    "use strict";
+
+    var a9 = {
+      flLhL: "https://mcs-mimp-web.sf-express.com/mcs-mimp/share/app/shareRedirect?sign=",
+      pKpXY: "&source=SFAPP&bizCode=647@RnlvejM1R3VTSVZ6d3BNaXJxRFpOUVVtQkp0ZnFpNDBKdytobm5TQWxMeHpVUXVrVzVGMHVmTU5BVFA1bXlwcw==",
+      HQjvK: "get",
+      ySEBL: function (aG, aH) {
+        return aG !== aH;
       },
-      _0x206a36 = await axios(_0x4b6ec9);
-    if (_0x206a36?.["data"]?.["msg"] === "success") {
+      yNciA: "HvFmc",
+      SLrEZ: function (aG, aH) {
+        return aG == aH;
+      },
+      NquxC: function (aG, aH) {
+        return aG == aH;
+      },
+      qpFGW: function (aG, aH, aI) {
+        return aG(aH, aI);
+      },
+      zcEXS: "KmfnC",
+      hyZiI: function (aG, aH) {
+        return aG >= aH;
+      },
+      gsbdk: function (aG, aH) {
+        return aG === aH;
+      },
+      uctSm: "qWJSb",
+      Qlljy: "throw",
+      lNyXA: function (aG, aH) {
+        return aG === aH;
+      },
+      AtgXN: "break",
+      TqeWH: "return",
+      AeJQb: "nbBCx",
+      jQhqY: function (aG, aH, aI, aJ) {
+        return aG(aH, aI, aJ);
+      },
+      CuEtc: "_invoke",
+      SbYTx: function (aG, aH, aI, aJ) {
+        return aG(aH, aI, aJ);
+      },
+      TQkWv: "(((.+)+)+)+$",
+      iBViG: "kvVNP",
+      clEpY: function (aG, aH) {
+        return aG - aH;
+      },
+      VTgHM: function (aG, aH) {
+        return aG(aH);
+      },
+      WifBS: "illegal catch attempt",
+      ERxPS: "string",
+      NmXzR: function (aG, aH, aI, aJ) {
+        return aG(aH, aI, aJ);
+      },
+      tgJpI: function (aG, aH, aI) {
+        return aG(aH, aI);
+      },
+      JHHrI: function (aG, aH) {
+        return aG + aH;
+      },
+      odkjD: "yDCXR",
+      MoMid: function (aG, aH) {
+        return aG === aH;
+      },
+      lBdtc: "HtAGd",
+      iIJgA: function (aG, aH) {
+        return aG < aH;
+      },
+      NFqFy: "end",
+      XNbPY: function (aG, aH) {
+        return aG in aH;
+      },
+      ynwIl: "https://ccsp-egmas.sf-express.com/cx-app-member/member/app/memberActivity/reportTask",
+      CDLPc: "post",
+      EMlaE: "json",
+      MnEJJ: "vIMRP",
+      ygkVf: "TzOQO",
+      Qeabm: function (aG, aH, aI, aJ) {
+        return aG(aH, aI, aJ);
+      },
+      dIOAj: "ZXPtr",
+      OnAfF: "object",
+      ORhfB: function (aG, aH) {
+        return aG(aH);
+      },
+      JtynE: "PbsCb",
+      zahDF: function (aG, aH) {
+        return aG(aH);
+      },
+      HYElm: "iIlri",
+      lKgxt: "lLakC",
+      hApmR: function (aG, aH, aI, aJ, aK) {
+        return aG(aH, aI, aJ, aK);
+      },
+      yANmN: "cSWlS",
+      MQBSv: function (aG, aH) {
+        return aG(aH);
+      },
+      Vdxhi: function (aG, aH) {
+        return aG in aH;
+      },
+      EtIaf: "VFkYr",
+      zfaDJ: "BfRvH",
+      HQMNS: function (aG, aH) {
+        return aG(aH);
+      },
+      OvvSV: "当前请求已超时",
+      sPcLJ: function (aG, aH, aI) {
+        return aG(aH, aI);
+      },
+      vEfug: function (aG, aH) {
+        return aG || aH;
+      },
+      Pkzlg: function (aG, aH) {
+        return aG === aH;
+      },
+      XRmhP: "] 领取[",
+      scOOE: function (aG, aH) {
+        return aG(aH);
+      },
+      uVyPn: function (aG, aH) {
+        return aG !== aH;
+      },
+      kGVXM: "BgPrL",
+      isXyZ: "Generator is already running",
+      Fhfia: function (aG, aH) {
+        return aG === aH;
+      },
+      ABAtn: function (aG, aH) {
+        return aG !== aH;
+      },
+      YuBWA: "IIZgZ",
+      fNQZs: function (aG, aH) {
+        return aG === aH;
+      },
+      kiApn: function (aG, aH) {
+        return aG === aH;
+      },
+      GStdY: "byzTe",
+      PNrNb: "oYKXq",
+      Zgwlj: "cfwvY",
+      FJort: "HDGGh",
+      WDuBG: "next",
+      CyZtx: function (aG, aH) {
+        return aG === aH;
+      },
+      CAOSS: "XckHo",
+      SYLry: function (aG, aH) {
+        return aG === aH;
+      },
+      uwBJJ: function (aG, aH) {
+        return aG === aH;
+      },
+      lEIEM: function (aG, aH, aI, aJ) {
+        return aG(aH, aI, aJ);
+      },
+      pfFNL: function (aG, aH) {
+        return aG === aH;
+      },
+      OZUnm: "normal",
+      eAQff: "TheQH",
+      KFxgx: "txWtD",
+      cZRuH: "1|3|5|0|4|2",
+      bBUnZ: "iterator result is not an object",
+      HFcdM: function (aG, aH) {
+        return aG + aH;
+      },
+      VqjuP: "The iterator does not provide a '",
+      WXwlA: "' method",
+      QZdES: function (aG, aH, aI, aJ) {
+        return aG(aH, aI, aJ);
+      },
+      RAyTH: function (aG, aH) {
+        return aG === aH;
+      },
+      dbAfj: "kyktk",
+      XCRYZ: function (aG, aH) {
+        return aG in aH;
+      },
+      WwPCS: "IJMzq",
+      tOjUa: function (aG, aH) {
+        return aG !== aH;
+      },
+      fXvXf: "vXqdQ",
+      kCyLP: function (aG, aH) {
+        return aG < aH;
+      },
+      McZLe: "PzciW",
+      ILlIM: function (aG, aH) {
+        return aG === aH;
+      },
+      WCCQj: "iBpIm",
+      gnYZc: "function",
+      gGVLl: function (aG, aH) {
+        return aG(aH);
+      },
+      kwJmJ: "qAyLD",
+      UDhgk: "UmWbv",
+      xVnIz: function (aG, aH) {
+        return aG + aH;
+      },
+      QLaDO: function (aG, aH) {
+        return aG(aH);
+      },
+      Heceb: " is not iterable",
+      mOUNb: function (aG, aH) {
+        return aG === aH;
+      },
+      lwoqG: function (aG, aH) {
+        return aG(aH);
+      },
+      czBfb: function (aG, aH) {
+        return aG !== aH;
+      },
+      ZzioJ: "HXJtY",
+      YKBOY: "biGOg",
+      ygoXY: function (aG, aH) {
+        return aG === aH;
+      },
+      zNykV: "GeneratorFunction",
+      MluGN: function (aG, aH, aI, aJ) {
+        return aG(aH, aI, aJ);
+      },
+      HeAeM: function (aG, aH) {
+        return aG === aH;
+      },
+      CqxhA: function (aG, aH, aI) {
+        return aG(aH, aI);
+      },
+      XfrLB: function (aG, aH) {
+        return aG === aH;
+      },
+      SSgwa: function (aG, aH) {
+        return aG + aH;
+      },
+      erxtb: "hfGdX",
+      ideEo: "MmAtL",
+      jryWJ: function (aG, aH) {
+        return aG !== aH;
+      },
+      pivmq: "BgNvA",
+      ttxdR: function (aG, aH) {
+        return aG === aH;
+      },
+      xJvYX: function (aG, aH) {
+        return aG !== aH;
+      },
+      uOznY: "pyiEc",
+      usboA: "kJwnL",
+      WSPpD: "[object Generator]",
+      ZsTtA: function (aG, aH, aI) {
+        return aG(aH, aI);
+      },
+      GCYhz: "LFbpd",
+      xxSUQ: "zHPXb",
+      PyNQK: "eIKOS",
+      hoReY: "default",
+      BcKVf: function (aG, aH) {
+        return aG != aH;
+      },
+      JhfKT: "@@toPrimitive must return a primitive value.",
+      rvBdW: "symbol",
+      GSaMv: function (aG, aH) {
+        return aG > aH;
+      },
+      gGuyd: function (aG, aH, aI) {
+        return aG(aH, aI);
+      },
+      LqtIt: "] 完成[",
+      GfnSy: "]任务:",
+      XEYee: function (aG) {
+        return aG();
+      },
+      CdrkG: function (aG, aH) {
+        return aG != aH;
+      },
+      AHUDE: "undefined",
+      skNVV: "@@iterator",
+      fPNcl: function (aG, aH, aI, aJ) {
+        return aG(aH, aI, aJ);
+      },
+      JlRTE: function (aG, aH) {
+        return aG - aH;
+      },
+      UZVJR: "oAkhe",
+      fGjrw: function (aG, aH) {
+        return aG <= aH;
+      },
+      wpkyd: "finallyLoc",
+      ZgtEe: "KdRDY",
+      NKzii: "continue",
+      VISNl: "Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
+      LcxgU: "qXZqR",
+      lhcRY: "VjfCp",
+      egnnP: "oRdFt",
+      vhTLe: "rdAGj",
+      rEMaV: function (aG, aH) {
+        return aG === aH;
+      },
+      nguFW: function (aG, aH, aI, aJ, aK) {
+        return aG(aH, aI, aJ, aK);
+      },
+      VJOyW: "vioin",
+      lvsHS: "] 签到:",
+      KXjGD: function (aG, aH) {
+        return aG == aH;
+      },
+      gskGH: "debug",
+      jJPzH: "\n-----------",
+      olyFe: function (aG, aH) {
+        return aG !== aH;
+      },
+      oBeBQ: "wttyT",
+      gMvWZ: function (aG, aH) {
+        return aG - aH;
+      },
+      EpoNa: function (aG, aH) {
+        return aG === aH;
+      },
+      EpcOX: "vYmab",
+      tdSwZ: "qhYlw",
+      QswVD: function (aG, aH) {
+        return aG === aH;
+      },
+      yYdKx: "QpYPz",
+      ELUKA: "mnFXX",
+      aBKMV: "ZBNHB",
+      WyABP: "drTPe",
+      LSXaJ: function (aG, aH) {
+        return aG === aH;
+      }
+    };
+    F = function () {
       {
-        const _0x255499 = _0x206a36?.["data"]?.["data"]?.["title"];
-        console.log("🎉 抽奖成功！手机号: " + maskPhoneNumber(_0x529ac8) + ", 获得: " + _0x255499);
-        return {
-          "success": true,
-          "phone": _0x529ac8,
-          "prize": _0x255499,
-          "uid": _0x388de8
+        return ab;
+      }
+    };
+    var aa;
+    var ab = {};
+    var ac = Object.prototype;
+    var ad = ac.hasOwnProperty;
+    var ae = Object.defineProperty || function (aG, aH, aI) {
+      {
+        aG[aH] = aI.value;
+      }
+    };
+    var af = "function" == typeof Symbol ? Symbol : {};
+    var ag = af.iterator || "@@iterator";
+    var ah = af.asyncIterator || "@@asyncIterator";
+    var ai = af.toStringTag || "@@toStringTag";
+    function aj(aG, aH, aI) {
+      {
+        var aJ = {
+          value: aI,
+          enumerable: true,
+          configurable: true,
+          writable: true
+        };
+        Object.defineProperty(aG, aH, aJ);
+        return aG[aH];
+      }
+    }
+    try {
+      {
+        aj({}, "");
+      }
+    } catch (aH) {
+      {
+        aj = function (aI, aJ, aK) {
+          {
+            return aI[aJ] = aK;
+          }
         };
       }
-    } else {
-      return _0x206a36?.["data"]?.["msg"] === "抽奖机会不足" ? (console.log("⚠️ 抽奖机会不足：手机号=" + maskPhoneNumber(_0x529ac8)), {
-        "success": false,
-        "reason": "no_chance"
-      }) : _0x206a36?.["data"]?.["msg"] === "图形验证码校验未通过" ? (console.log("⚠️ 图形验证码校验未通过，重试：手机号=" + maskPhoneNumber(_0x529ac8)), await sleep(6000), await doLottery(_0x1dd948, _0x3bea7c, _0x49f74f, _0x529ac8, _0x388de8)) : _0x206a36?.["data"]?.["msg"]?.["includes"]("操作过于频繁") ? (console.log("⚠️ 操作过于频繁，重试：手机号=" + maskPhoneNumber(_0x529ac8)), await sleep(10000), await doLottery(_0x1dd948, _0x3bea7c, _0x49f74f, _0x529ac8, _0x388de8)) : (console.log("🎰 抽奖结果：" + (_0x206a36?.["data"]?.["data"]?.["title"] || _0x206a36?.["data"]?.["msg"]) + "，手机号=" + maskPhoneNumber(_0x529ac8)), {
-        "success": false,
-        "reason": "other",
-        "message": _0x206a36?.["data"]?.["msg"]
+    }
+    function ak(aJ, aK, aL, aM) {
+      {
+        var aO = aK && aK.prototype instanceof ar ? aK : ar;
+        var aP = Object.create(aO.prototype);
+        var aQ = new aE(aM || []);
+        ae(aP, "_invoke", {
+          value: aA(aJ, aL, aQ)
+        });
+        return aP;
+      }
+    }
+    function al(aJ, aK, aL) {
+      {
+        try {
+          {
+            return {
+              type: "normal",
+              arg: aJ.call(aK, aL)
+            };
+          }
+        } catch (aQ) {
+          {
+            var aO = {
+              type: "throw",
+              arg: aQ
+            };
+            return aO;
+          }
+        }
+      }
+    }
+    ab.wrap = ak;
+    var am = "suspendedStart";
+    var an = "suspendedYield";
+    var ao = "executing";
+    var ap = "completed";
+    var aq = {};
+    function ar() {}
+    function as() {}
+    function at() {}
+    var au = {};
+    aj(au, ag, function () {
+      return this;
+    });
+    var av = Object.getPrototypeOf;
+    var aw = av && av(av(aF([])));
+    aw && aw !== ac && ad.call(aw, ag) && (au = aw);
+    at.prototype = ar.prototype = Object.create(au);
+    var ax = at.prototype;
+    function ay(aJ) {
+      ["next", "throw", "return"].forEach(function (aN) {
+        {
+          aj(aJ, aN, function (aQ) {
+            {
+              return this._invoke(aN, aQ);
+            }
+          });
+        }
       });
     }
-  } catch (_0x2b1458) {
-    _0x2b1458.response && _0x2b1458.response.status === 429 && (console.log("⏳ 抽奖请求频率限制，等待15秒后重试"), await sleep(15000));
-    console.error("❌ 抽奖过程错误：" + _0x2b1458.message + "，手机号=" + maskPhoneNumber(_0x529ac8));
-    await sleep(6000);
-    return await doLottery(_0x1dd948, _0x3bea7c, _0x49f74f, _0x529ac8, _0x388de8);
-  }
-}
-async function getLotteryChances(_0x44a864, _0x1ba7fa) {
-  console.log("🎫 查询抽奖次数：active_code=" + _0x1ba7fa);
-  return retryDecorator(3, 3000)(getLotteryChancesImpl).call(this, _0x44a864, _0x1ba7fa);
-}
-async function getLotteryChancesImpl(_0x122f75, _0x4a901b) {
-  try {
-    const _0x1502a2 = {
-      "method": "get",
-      "url": "https://xbk.189.cn/xbkapi/active/v2/lottery/getLotteryChance?active_code=" + _0x4a901b,
-      "headers": {
-        "User-Agent": "Mozilla/5.0 (Linux; U; Android 12; zh-cn; ONEPLUS A9000 Build/QKQ1.190716.003) AppleWebKit/533.1 (KHTML, like Gecko) Version/5.0 Mobile Safari/533.1",
-        "Authorization": "Bearer " + rsaJiami.encrypt(_0x122f75, "base64")
-      },
-      "timeout": 15000,
-      "validateStatus": function (_0x5576f9) {
-        return _0x5576f9 < 500;
+    function az(aJ, aK) {
+      {
+        function aO(aP, aQ, aR, aS) {
+          {
+            var aU = al(aJ[aP], aJ, aQ);
+            if ("throw" !== aU.type) {
+              {
+                var aV = aU.arg;
+                var aW = aV.value;
+                return aW && "object" == q(aW) && ad.call(aW, "__await") ? aK.resolve(aW.__await).then(function (aY) {
+                  {
+                    aO("next", aY, aR, aS);
+                  }
+                }, function (aY) {
+                  {
+                    aO("throw", aY, aR, aS);
+                  }
+                }) : aK.resolve(aW).then(function (aY) {
+                  {
+                    aV.value = aY;
+                    aR(aV);
+                  }
+                }, function (aY) {
+                  {
+                    return aO("throw", aY, aR, aS);
+                  }
+                });
+              }
+            }
+            aS(aU.arg);
+          }
+        }
+        var aM;
+        ae(this, "_invoke", {
+          value: function (aP, aQ) {
+            {
+              function aS() {
+                {
+                  return new aK(function (aU, aV) {
+                    aO(aP, aQ, aU, aV);
+                  });
+                }
+              }
+              return aM = aM ? aM.then(aS, aS) : aS();
+            }
+          }
+        });
+      }
+    }
+    function aA(aJ, aK, aL) {
+      {
+        var aN = am;
+        return function (aO, aP) {
+          {
+            if (aN === ao) {
+              throw Error("Generator is already running");
+            }
+            if (aN === ap) {
+              {
+                if ("throw" === aO) {
+                  throw aP;
+                }
+                var aR = {
+                  value: aa,
+                  done: true
+                };
+                return aR;
+              }
+            }
+            for (aL.method = aO, aL.arg = aP;;) {
+              {
+                var aS = aL.delegate;
+                if (aS) {
+                  {
+                    var aT = aB(aS, aL);
+                    if (aT) {
+                      {
+                        if (aT === aq) {
+                          continue;
+                        }
+                        return aT;
+                      }
+                    }
+                  }
+                }
+                if ("next" === aL.method) {
+                  aL.sent = aL._sent = aL.arg;
+                } else {
+                  if ("throw" === aL.method) {
+                    {
+                      if (aN === am) {
+                        throw aN = ap, aL.arg;
+                      }
+                      aL.dispatchException(aL.arg);
+                    }
+                  } else {
+                    "return" === aL.method && aL.abrupt("return", aL.arg);
+                  }
+                }
+                aN = ao;
+                var aU = al(aJ, aK, aL);
+                if ("normal" === aU.type) {
+                  {
+                    if (aN = aL.done ? ap : an, aU.arg === aq) {
+                      continue;
+                    }
+                    var aV = {
+                      value: aU.arg,
+                      done: aL.done
+                    };
+                    return aV;
+                  }
+                }
+                "throw" === aU.type && (aN = ap, aL.method = "throw", aL.arg = aU.arg);
+              }
+            }
+          }
+        };
+      }
+    }
+    function aB(aJ, aK) {
+      {
+        var aN = aK.method;
+        var aO = aJ.iterator[aN];
+        if (aO === aa) {
+          aK.delegate = null;
+          "throw" === aN && aJ.iterator.return && (aK.method = "return", aK.arg = aa, aB(aJ, aK), "throw" === aK.method) || "return" !== aN && (aK.method = "throw", aK.arg = new TypeError("The iterator does not provide a '" + aN + "' method"));
+          return aq;
+        }
+        var aQ = al(aO, aJ.iterator, aK.arg);
+        if ("throw" === aQ.type) {
+          aK.method = "throw";
+          aK.arg = aQ.arg;
+          aK.delegate = null;
+          return aq;
+        }
+        var aP = aQ.arg;
+        return aP ? aP.done ? (aK[aJ.resultName] = aP.value, aK.next = aJ.nextLoc, "return" !== aK.method && (aK.method = "next", aK.arg = aa), aK.delegate = null, aq) : aP : (aK.method = "throw", aK.arg = new TypeError("iterator result is not an object"), aK.delegate = null, aq);
+      }
+    }
+    function aC(aJ) {
+      {
+        var aL = {
+          tryLoc: aJ[0]
+        };
+        1 in aJ && (aL.catchLoc = aJ[1]);
+        2 in aJ && (aL.finallyLoc = aJ[2], aL.afterLoc = aJ[3]);
+        this.tryEntries.push(aL);
+      }
+    }
+    function aD(aJ) {
+      {
+        var aM = aJ.completion || {};
+        aM.type = "normal";
+        delete aM.arg;
+        aJ.completion = aM;
+      }
+    }
+    function aE(aJ) {
+      {
+        var aK = {
+          tryLoc: "root"
+        };
+        this.tryEntries = [aK];
+        aJ.forEach(aC, this);
+        this.reset(true);
+      }
+    }
+    function aF(aJ) {
+      {
+        if (aJ || "" === aJ) {
+          {
+            var aL = aJ[ag];
+            if (aL) {
+              return aL.call(aJ);
+            }
+            if ("function" == typeof aJ.next) {
+              return aJ;
+            }
+            if (!isNaN(aJ.length)) {
+              {
+                var aM = -1;
+                var aN = function aQ() {
+                  {
+                    for (; ++aM < aJ.length;) {
+                      if (ad.call(aJ, aM)) {
+                        aQ.value = aJ[aM];
+                        aQ.done = false;
+                        return aQ;
+                      }
+                    }
+                    aQ.value = aa;
+                    aQ.done = true;
+                    return aQ;
+                  }
+                };
+                return aN.next = aN;
+              }
+            }
+          }
+        }
+        throw new TypeError(q(aJ) + " is not iterable");
+      }
+    }
+    as.prototype = at;
+    ae(ax, "constructor", {
+      value: at,
+      configurable: true
+    });
+    ae(at, "constructor", {
+      value: as,
+      configurable: true
+    });
+    as.displayName = aj(at, ai, "GeneratorFunction");
+    ab.isGeneratorFunction = function (aJ) {
+      {
+        var aK = "function" == typeof aJ && aJ.constructor;
+        return !!aK && (aK === as || "GeneratorFunction" === (aK.displayName || aK.name));
       }
     };
-    let _0x4628d7 = await axios(_0x1502a2);
-    if (_0x4628d7.data && _0x4628d7.data.code === 200) {
-      const _0x36b3bd = _0x4628d7.data?.["data"] || 0;
-      console.log("🎫 抽奖次数查询结果：" + _0x36b3bd + "次");
-      return _0x36b3bd;
-    } else {
-      console.log("⚠️ 抽奖次数查询返回异常: code=" + _0x4628d7.data?.["code"] + ", msg=" + _0x4628d7.data?.["msg"]);
-      return 0;
-    }
-  } catch (_0x4547b8) {
-    if (_0x4547b8.response && _0x4547b8.response.status === 429) {
-      console.log("⏳ 抽奖次数查询频率限制，等待后重试");
-      await sleep(10000);
-      throw _0x4547b8;
-    }
-    console.error("❌ 获取抽奖次数失败:", _0x4547b8.message);
-    return 0;
-  }
-}
-function extractNumbersWithDecimalsAndNegatives(_0x3912b9) {
-  const _0x45de4a = /-?\d+(\.\d+)?/g,
-    _0x485ffe = _0x3912b9.match(_0x45de4a);
-  return _0x485ffe ? _0x485ffe.map(Number) : [];
-}
-async function checkLiveRoomLottery(_0x27324b, _0x540342) {
-  console.log("🔍 检查直播间抽奖活动: " + _0x27324b.provinceName + "-" + _0x27324b.title + " (ID: " + _0x27324b.liveId + ")");
-  try {
-    {
-      let _0x5c3491 = 1,
-        _0x5bf1b8 = true,
-        _0x30ce64 = [];
-      while (_0x5bf1b8) {
-        try {
-          const _0x3487c1 = await getGoodsList(_0x27324b.liveId, _0x5c3491, _0x540342);
-          if (_0x3487c1 && _0x3487c1.data && _0x3487c1.data.list) {
-            for (const _0x1d40d8 of _0x3487c1.data.list) {
+    ab.mark = function (aJ) {
+      {
+        Object.setPrototypeOf ? Object.setPrototypeOf(aJ, at) : (aJ.__proto__ = at, aj(aJ, ai, "GeneratorFunction"));
+        aJ.prototype = Object.create(ax);
+        return aJ;
+      }
+    };
+    ab.awrap = function (aJ) {
+      {
+        var aK = {
+          __await: aJ
+        };
+        return aK;
+      }
+    };
+    ay(az.prototype);
+    aj(az.prototype, ah, function () {
+      {
+        return this;
+      }
+    });
+    ab.AsyncIterator = az;
+    ab.async = function (aJ, aK, aL, aM, aN) {
+      {
+        undefined === aN && (aN = Promise);
+        var aQ = new az(ak(aJ, aK, aL, aM), aN);
+        return ab.isGeneratorFunction(aK) ? aQ : aQ.next().then(function (aR) {
+          {
+            return aR.done ? aR.value : aQ.next();
+          }
+        });
+      }
+    };
+    ay(ax);
+    aj(ax, ai, "Generator");
+    aj(ax, ag, function () {
+      return this;
+    });
+    aj(ax, "toString", function () {
+      {
+        return "[object Generator]";
+      }
+    });
+    ab.keys = function (aJ) {
+      {
+        var aL = Object(aJ);
+        var aM = [];
+        for (var aN in aL) aM.push(aN);
+        aM.reverse();
+        return function aP() {
+          {
+            for (; aM.length;) {
               {
-                if (_0x1d40d8.activeCode && _0x1d40d8.activeCode.trim() !== "") {
-                  {
-                    if (!runGameId.includes(_0x1d40d8.activeCode)) {
-                      const _0x51fce1 = {
-                        ..._0x1d40d8,
-                        "liveId": _0x27324b.liveId,
-                        "liveTitle": _0x27324b.title,
-                        "liveStartTime": _0x27324b.liveStartTime,
-                        "provinceName": _0x27324b.provinceName
-                      };
-                      _0x30ce64.push(_0x51fce1);
-                      runGameId.push(_0x1d40d8.activeCode);
-                      console.log("🎁 发现新的可抽奖活动: " + _0x27324b.provinceName + "-" + _0x27324b.title + ", activeCode=" + _0x1d40d8.activeCode);
+                var aR = aM.pop();
+                if (aR in aL) {
+                  aP.value = aR;
+                  aP.done = false;
+                  return aP;
+                }
+              }
+            }
+            aP.done = true;
+            return aP;
+          }
+        };
+      }
+    };
+    ab.values = aF;
+    aE.prototype = {
+      constructor: aE,
+      reset: function (aJ) {
+        {
+          if (this.prev = 0, this.next = 0, this.sent = this._sent = aa, this.done = false, this.delegate = null, this.method = "next", this.arg = aa, this.tryEntries.forEach(aD), !aJ) {
+            for (var aL in this) "t" === aL.charAt(0) && ad.call(this, aL) && !isNaN(+aL.slice(1)) && (this[aL] = aa);
+          }
+        }
+      },
+      stop: function () {
+        {
+          this.done = true;
+          var aK = this.tryEntries[0].completion;
+          if ("throw" === aK.type) {
+            throw aK.arg;
+          }
+          return this.rval;
+        }
+      },
+      dispatchException: function (aJ) {
+        {
+          if (this.done) {
+            throw aJ;
+          }
+          var aL = this;
+          function aR(aS, aT) {
+            aO.type = "throw";
+            aO.arg = aJ;
+            aL.next = aS;
+            aT && (aL.method = "next", aL.arg = aa);
+            return !!aT;
+          }
+          for (var aM = this.tryEntries.length - 1; aM >= 0; --aM) {
+            {
+              var aN = this.tryEntries[aM];
+              var aO = aN.completion;
+              if ("root" === aN.tryLoc) {
+                return aR("end");
+              }
+              if (aN.tryLoc <= this.prev) {
+                {
+                  var aP = ad.call(aN, "catchLoc");
+                  var aQ = ad.call(aN, "finallyLoc");
+                  if (aP && aQ) {
+                    {
+                      if (this.prev < aN.catchLoc) {
+                        return aR(aN.catchLoc, true);
+                      }
+                      if (this.prev < aN.finallyLoc) {
+                        return aR(aN.finallyLoc);
+                      }
+                    }
+                  } else {
+                    if (aP) {
+                      {
+                        if (this.prev < aN.catchLoc) {
+                          return aR(aN.catchLoc, true);
+                        }
+                      }
+                    } else {
+                      {
+                        if (!aQ) {
+                          throw Error("try statement without catch or finally");
+                        }
+                        if (this.prev < aN.finallyLoc) {
+                          return aR(aN.finallyLoc);
+                        }
+                      }
                     }
                   }
                 }
               }
             }
-            const _0xd8cf77 = _0x3487c1.data.count || 0,
-              _0x5a0fce = _0x30ce64.length;
-            if (_0x5a0fce >= _0xd8cf77 || _0x3487c1.data.list.length === 0) {
-              _0x5bf1b8 = false;
-            } else {
-              _0x5c3491++;
-              await sleep(1000);
-            }
-          } else {
-            _0x5bf1b8 = false;
           }
-        } catch (_0x5bc853) {
-          console.error("❌ 获取直播间 " + _0x27324b.liveId + " 商品失败:", _0x5bc853.message);
-          _0x5bf1b8 = false;
         }
-      }
-      return _0x30ce64;
-    }
-  } catch (_0x2d3e22) {
-    console.error("❌ 检查直播间 " + _0x27324b.liveId + " 抽奖活动失败:", _0x2d3e22.message);
-    return [];
-  }
-}
-async function processLotteryActivities(_0x29f08e, _0x534a17) {
-  if (_0x29f08e.length === 0) return;
-  console.log("🎯 开始处理抽奖活动（共" + _0x29f08e.length + "个活动）");
-  isStart = true;
-  try {
-    for (let _0x5557ef = 0; _0x5557ef < _0x29f08e.length; _0x5557ef++) {
-      const _0x40f851 = _0x29f08e[_0x5557ef];
-      console.log("🎯 处理第" + (_0x5557ef + 1) + "/" + _0x29f08e.length + "个活动：liveId=" + _0x40f851.liveId + "，activeCode=" + _0x40f851.activeCode + "，省份=" + _0x40f851.provinceName);
-      for (const _0x5dd901 of _0x534a17) {
-        if (_0x5dd901.xbkToken && _0x5dd901.isDo !== false) try {
-          const _0xdbb50a = await getLotteryChances(_0x5dd901.xbkToken, _0x40f851.activeCode);
-          console.log("ℹ️ 账号" + maskPhoneNumber(_0x5dd901.phone) + "有" + _0xdbb50a + "次抽奖机会");
-          for (let _0x5067c6 = 0; _0x5067c6 < _0xdbb50a; _0x5067c6++) {
-            console.log("🎰 账号" + maskPhoneNumber(_0x5dd901.phone) + "的第" + (_0x5067c6 + 1) + "/" + _0xdbb50a + "次抽奖（活动" + (_0x5557ef + 1) + "/" + _0x29f08e.length + "）");
-            const _0x1370a8 = await doLottery(_0x40f851.liveId, _0x40f851.activeCode, _0x5dd901.xbkToken, _0x5dd901.phone, _0x5dd901.uid);
-            if (_0x1370a8 && _0x1370a8.success) {
-              if (!pushArr[_0x5dd901.uid]) {
-                pushArr[_0x5dd901.uid] = {};
-              }
-              pushArr[_0x5dd901.uid][_0x5dd901.phone] = "- **手机号**: " + maskPhoneNumber(_0x5dd901.phone) + "  **奖品**: " + _0x1370a8.prize + "\n";
-            }
-            await sleep(3000);
-          }
-        } catch (_0xd2c82e) {
-          console.error("❌ 账号" + maskPhoneNumber(_0x5dd901.phone) + "处理抽奖失败:", _0xd2c82e.message);
-        }
-      }
-      await sleep(2000);
-    }
-    for (let _0x10753b in pushArr) {
-      let _0x580d8d = "## 🎉 星播客中奖通知\n\n",
-        _0x45051c = 0,
-        _0x15c62a = false;
-      for (let _0x26494d in pushArr[_0x10753b]) {
-        _0x580d8d += pushArr[_0x10753b][_0x26494d];
-        let _0x556940 = extractNumbersWithDecimalsAndNegatives(pushArr[_0x10753b][_0x26494d]);
-        _0x45051c += _0x556940[_0x556940.length - 1] || 0;
-        _0x15c62a = true;
-      }
-      _0x15c62a && _0x45051c > 0 && (_0x580d8d += "\n---\n**总计**: " + _0x45051c + "元话费\n", _0x580d8d += "**时间**: " + getTimestampFormatted(), sendTxt[_0x10753b] = _0x580d8d, console.log("📝 准备推送的中奖结果到钉钉"));
-    }
-    pushArr = {};
-  } catch (_0x41f846) {
-    console.error("❌ 抽奖流程严重错误：" + _0x41f846.message);
-  } finally {
-    isStart = false;
-  }
-}
-async function continuousDetectionMode(_0x3d3cbb) {
-  console.log("🚀 启动持续检测模式");
-  while (true) {
-    try {
-      {
-        if (_0x3d3cbb.length === 0) {
-          console.log("❌ 没有可用账号，等待重新登录");
-          await sleep(30000);
-          continue;
-        }
-        const _0xcc0ade = _0x3d3cbb[Math.floor(Math.random() * _0x3d3cbb.length)];
-        if (!_0xcc0ade.xbkToken) {
-          console.log("⚠️ 账号未登录，跳过本次检测");
-          await sleep(30000);
-          continue;
-        }
-        console.log("🔄 开始新一轮检测...");
-        const _0x272b18 = await scanNewLiveRooms(_0xcc0ade.xbkToken);
-        if (_0x272b18.length > 0) {
-          console.log("🎯 发现 " + _0x272b18.length + " 个新直播间，开始检查抽奖活动");
-          let _0x53f585 = [];
-          for (const _0x5a0863 of _0x272b18) {
+      },
+      abrupt: function (aJ, aK) {
+        {
+          for (var aM = this.tryEntries.length - 1; aM >= 0; --aM) {
             {
-              const _0x3c7d33 = await checkLiveRoomLottery(_0x5a0863, _0xcc0ade.xbkToken);
-              _0x53f585 = _0x53f585.concat(_0x3c7d33);
-              await sleep(1000);
-            }
-          }
-          _0x53f585.length > 0 && (await processLotteryActivities(_0x53f585, _0x3d3cbb));
-          liveListAll = liveListAll.concat(_0x272b18);
-          console.log("💾 更新直播间列表，当前总数: " + liveListAll.length);
-        } else console.log("🔍 未发现新直播间");
-        console.log("⏳ 等待2分钟后继续检测...");
-        await sleep(120000);
-      }
-    } catch (_0x1d8e73) {
-      console.error("❌ 持续检测模式错误:", _0x1d8e73.message);
-      await sleep(60000);
-    }
-  }
-}
-async function loginAllAccounts(_0x1d82a8, _0x2cc841) {
-  console.log("🔐 开始检查所有账号状态（共" + _0x1d82a8.length + "个）");
-  try {
-    {
-      let _0x49249b = _0x1d82a8.map(async (_0x143f10, _0x5133f7) => {
-        try {
-          if (!_0x143f10.time) {
-            console.log("🔐 账号" + maskPhoneNumber(_0x143f10.phone) + "：首次登录");
-            let _0x4e05db = await loginPhoneWithCache(_0x143f10.phone, _0x143f10.password, _0x2cc841);
-            _0x1d82a8[_0x5133f7].time = new Date().valueOf();
-            if (!_0x4e05db) {
-              console.log("❌ 账号" + maskPhoneNumber(_0x143f10.phone) + "登录失败");
-              _0x1d82a8[_0x5133f7].isLogin = false;
-              return;
-            }
-            let _0x507bc6 = await getUserCode(_0x4e05db.uid),
-              _0x3635c5 = await getAccessToken(_0x507bc6);
-            _0x1d82a8[_0x5133f7].xbkToken = _0x3635c5;
-            _0x1d82a8[_0x5133f7].isDo = true;
-            _0x1d82a8[_0x5133f7].isLogin = true;
-            _0x1d82a8[_0x5133f7].uid = _0x4e05db.uid;
-            console.log("✅ 账号" + maskPhoneNumber(_0x143f10.phone) + "登录成功");
-          } else {
-            if (_0x143f10.time && new Date().valueOf() - _0x143f10.time > 43200000) {
-              console.log("🔐 账号" + maskPhoneNumber(_0x143f10.phone) + "：token过期（>12小时），重新登录");
-              let _0x5a64a1 = await loginPhoneWithCache(_0x143f10.phone, _0x143f10.password, _0x2cc841);
-              _0x1d82a8[_0x5133f7].time = new Date().valueOf();
-              if (!_0x5a64a1) {
+              var aN = this.tryEntries[aM];
+              if (aN.tryLoc <= this.prev && ad.call(aN, "finallyLoc") && this.prev < aN.finallyLoc) {
                 {
-                  console.log("❌ 账号" + maskPhoneNumber(_0x143f10.phone) + "重新登录失败");
-                  _0x1d82a8[_0x5133f7].isLogin = false;
-                  return;
+                  var aO = aN;
+                  break;
                 }
               }
-              let _0x4b3f29 = await getUserCode(_0x5a64a1.uid),
-                _0x24942d = await getAccessToken(_0x4b3f29);
-              _0x1d82a8[_0x5133f7].xbkToken = _0x24942d;
-              _0x1d82a8[_0x5133f7].isDo = true;
-              _0x1d82a8[_0x5133f7].isLogin = true;
-              _0x1d82a8[_0x5133f7].uid = _0x5a64a1.uid;
-              console.log("✅ 账号" + maskPhoneNumber(_0x143f10.phone) + "重新登录成功");
-            } else console.log("ℹ️ 账号" + maskPhoneNumber(_0x143f10.phone) + "状态正常（无需重新登录）");
+            }
           }
-        } catch (_0x13b9ca) {
-          console.error("❌ 处理账号" + maskPhoneNumber(_0x143f10.phone) + "错误：" + _0x13b9ca.message);
+          aO && ("break" === aJ || "continue" === aJ) && aO.tryLoc <= aK && aK <= aO.finallyLoc && (aO = null);
+          var aP = aO ? aO.completion : {};
+          aP.type = aJ;
+          aP.arg = aK;
+          return aO ? (this.method = "next", this.next = aO.finallyLoc, aq) : this.complete(aP);
         }
-      });
-      await Promise.all(_0x49249b);
-      const _0x41ae4f = _0x1d82a8.filter(_0x14a698 => _0x14a698.isLogin && _0x14a698.xbkToken);
-      console.log("🔐 所有账号检查完毕，活跃账号数量：" + _0x41ae4f.length + "/" + _0x1d82a8.length);
-      return _0x41ae4f.length > 0;
-    }
-  } catch (_0x78c003) {
-    console.error("❌ 批量登录错误：" + _0x78c003.message);
-    return false;
-  }
-}
-async function initializeUserData(_0x374227) {
-  console.log("📋 开始初始化用户数据");
-  try {
-    let _0x116c8a = {};
-    try {
-      _0x116c8a = JSON.parse(fs.readFileSync("./Cache.json", "utf8"));
-      console.log("📋 成功加载缓存数据");
-    } catch (_0x221c2a) {
-      console.log("📋 缓存文件不存在，创建新缓存");
-      fs.writeFileSync("./Cache.json", JSON.stringify({}), "utf8");
-      _0x116c8a = {};
-    }
-    console.log("📋 共获取到" + _0x374227.length + "个账号");
-    return await loginAllAccounts(_0x374227, _0x116c8a);
-  } catch (_0x21e91a) {
-    console.error("❌ 初始化用户数据错误：" + _0x21e91a.message);
-    return false;
-  }
-}
-function getTimestamp() {
-  return getTimestampFormatted();
-}
-const originalLog = console.log;
-console.log = function (..._0x522a08) {
-  const _0x8dd9d7 = getTimestamp();
-  originalLog("[" + _0x8dd9d7 + "]", ..._0x522a08);
-};
-let userPhone = [];
-process?.["env"]?.["chinaTelecomAccount"] ? process?.["env"]?.["chinaTelecomAccount"]["split"]("&")["map"](_0x2920d8 => {
-  if (_0x2920d8) {
-    let _0x1ea114 = _0x2920d8.split("#")[0],
-      _0x5df707 = _0x2920d8.split("#")[1];
-    const _0x54eacb = {
-      "phone": _0x1ea114,
-      "password": _0x5df707
-    };
-    userPhone.push(_0x54eacb);
-  }
-}) : (console.log("❌ 未找到环境变量，请设置环境变量chinaTelecomAccount"), process.exit());
-(async () => {
-  console.log("🚀 脚本启动，开始初始化...");
-  if (!validateDate()) {
-    process.exit(1);
-    return;
-  }
-  try {
-    const _0x5f258b = await initializeUserData(userPhone);
-    if (!_0x5f258b) {
-      {
-        console.log("❌ 用户数据初始化失败");
-        process.exit(1);
-        return;
-      }
-    }
-    console.log("✅ 初始化完成，启动持续检测模式");
-    continuousDetectionMode(userPhone);
-  } catch (_0x597bd2) {
-    console.error("❌ 脚本初始化严重错误：" + _0x597bd2.message);
-    console.log("⏰ 1分钟后将重试初始化");
-    setTimeout(() => process.exit(1), 60000);
-  }
-})();
-setInterval(async () => {
-  if (!isStart) {
-    {
-      let _0x5d297e = Object.keys(sendTxt);
-      if (_0x5d297e.length > 0) {
+      },
+      complete: function (aJ, aK) {
         {
-          console.log("📤 发现" + _0x5d297e.length + "条待推送消息到钉钉");
-          for (let _0x281122 in sendTxt) {
-            await sendMsg(sendTxt[_0x281122], _0x281122);
-            await sleep(3000);
+          if ("throw" === aJ.type) {
+            throw aJ.arg;
           }
-          for (let _0x21dbae in sendTxt) {
-            delete sendTxt[_0x21dbae];
+          "break" === aJ.type || "continue" === aJ.type ? this.next = aJ.arg : "return" === aJ.type ? (this.rval = this.arg = aJ.arg, this.method = "return", this.next = "end") : "normal" === aJ.type && aK && (this.next = aK);
+          return aq;
+        }
+      },
+      finish: function (aJ) {
+        {
+          for (var aK = this.tryEntries.length - 1; aK >= 0; --aK) {
+            {
+              var aL = this.tryEntries[aK];
+              if (aL.finallyLoc === aJ) {
+                this.complete(aL.completion, aL.afterLoc);
+                aD(aL);
+                return aq;
+              }
+            }
           }
-          console.log("📤 所有钉钉消息推送完成");
+        }
+      },
+      catch: function (aJ) {
+        {
+          for (var aL = this.tryEntries.length - 1; aL >= 0; --aL) {
+            {
+              var aM = this.tryEntries[aL];
+              if (aM.tryLoc === aJ) {
+                {
+                  var aN = aM.completion;
+                  if ("throw" === aN.type) {
+                    {
+                      var aO = aN.arg;
+                      aD(aM);
+                    }
+                  }
+                  return aO;
+                }
+              }
+            }
+          }
+          throw Error("illegal catch attempt");
+        }
+      },
+      delegateYield: function (aJ, aK, aL) {
+        this.delegate = {
+          iterator: aF(aJ),
+          resultName: aK,
+          nextLoc: aL
+        };
+        "next" === this.method && (this.arg = aa);
+        return aq;
+      }
+    };
+    return ab;
+  }
+  function G(a9, aa) {
+    {
+      var ac = Object.keys(a9);
+      if (Object.getOwnPropertySymbols) {
+        {
+          var ad = Object.getOwnPropertySymbols(a9);
+          aa && (ad = ad.filter(function (af) {
+            {
+              return Object.getOwnPropertyDescriptor(a9, af).enumerable;
+            }
+          }));
+          ac.push.apply(ac, ad);
+        }
+      }
+      return ac;
+    }
+  }
+  function H(a9) {
+    {
+      for (var ab = 1; ab < arguments.length; ab++) {
+        {
+          var ac = null != arguments[ab] ? arguments[ab] : {};
+          ab % 2 ? G(Object(ac), true).forEach(function (ae) {
+            I(a9, ae, ac[ae]);
+          }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(a9, Object.getOwnPropertyDescriptors(ac)) : G(Object(ac)).forEach(function (ae) {
+            {
+              Object.defineProperty(a9, ae, Object.getOwnPropertyDescriptor(ac, ae));
+            }
+          });
+        }
+      }
+      return a9;
+    }
+  }
+  function I(a9, aa, ab) {
+    {
+      var ac = {
+        value: ab,
+        enumerable: true,
+        configurable: true,
+        writable: true
+      };
+      (aa = K(aa)) in a9 ? Object.defineProperty(a9, aa, ac) : a9[aa] = ab;
+      return a9;
+    }
+  }
+  function J(a9, aa) {
+    {
+      for (var ad = 0; ad < aa.length; ad++) {
+        {
+          var ae = aa[ad];
+          ae.enumerable = ae.enumerable || false;
+          ae.configurable = true;
+          "value" in ae && (ae.writable = true);
+          Object.defineProperty(a9, K(ae.key), ae);
         }
       }
     }
   }
-}, 60000);
+  function K(a9) {
+    {
+      var ab = function (ac, ad) {
+        {
+          if ("object" != q(ac) || !ac) {
+            return ac;
+          }
+          var ae = ac[Symbol.toPrimitive];
+          if (undefined !== ae) {
+            {
+              var af = ae.call(ac, ad || "default");
+              if ("object" != q(af)) {
+                return af;
+              }
+              throw new TypeError("@@toPrimitive must return a primitive value.");
+            }
+          }
+          return ("string" === ad ? String : Number)(ac);
+        }
+      }(a9, "string");
+      return "symbol" == q(ab) ? ab : ab + "";
+    }
+  }
+  function M(a9, aa, ab, ac, ad, ae, af) {
+    {
+      try {
+        {
+          var ag = a9[ae](af);
+          var ah = ag.value;
+        }
+      } catch (ak) {
+        return void ab(ak);
+      }
+      ag.done ? aa(ah) : Promise.resolve(ah).then(ac, ad);
+    }
+  }
+  function Q(a9) {
+    return function () {
+      var ac = this;
+      var ad = arguments;
+      return new Promise(function (ae, af) {
+        var ah = a9.apply(ac, ad);
+        function ai(ak) {
+          {
+            M(ah, ae, af, ai, aj, "next", ak);
+          }
+        }
+        function aj(ak) {
+          {
+            M(ah, ae, af, ai, aj, "throw", ak);
+          }
+        }
+        ai(undefined);
+      });
+    };
+  }
+  var R = ($.isNode() ? process.env.XZXXN : $.getdata("XZXXN")) || "";
+  var U = ($.isNode() ? process.env.XZXXNSERVER : $.getdata("XZXXNSERVER")) || "https://dalaoshi.xn--ug8h.eu.org";
+  var V = "sfsy_data";
+  var W = $.toObj($.isNode() ? process.env[V] : $.getdata(V)) || [];
+  function X() {
+    {
+      return Y.apply(this, arguments);
+    }
+  }
+  function Y() {
+    {
+      Y = Q(F().mark(function ab() {
+        {
+          var ad;
+          var ae;
+          var af;
+          var ag;
+          var ah;
+          var ai;
+          var aj;
+          var ak;
+          var al;
+          var am;
+          var an;
+          var ao;
+          var ap;
+          var aq;
+          var ar;
+          var as;
+          var at;
+          var au;
+          var av;
+          var aw;
+          var ax;
+          var ay;
+          var az;
+          return F().wrap(function (aB) {
+            {
+              for (;;) {
+                switch (aB.prev = aB.next) {
+                  case 0:
+                    ad = A($.userList);
+                    aB.prev = 1;
+                    ad.s();
+                  case 3:
+                    if ((ae = ad.n()).done) {
+                      {
+                        aB.next = 116;
+                        break;
+                      }
+                    }
+                    af = ae.value;
+                    $.log("\n------------- 账号".concat(af.index, " -------------\n"));
+                    aB.prev = 6;
+                    aB.next = 9;
+                    return null == af ? undefined : af.verify();
+                  case 9:
+                    if (ag = aB.sent, 200 == (null == ag ? undefined : ag.code)) {
+                      {
+                        aB.next = 13;
+                        break;
+                      }
+                    }
+                    console.log(null == ag ? undefined : ag.msg);
+                    return aB.abrupt("continue", 114);
+                  case 13:
+                    aB.next = 15;
+                    return null == af ? undefined : af.login();
+                  case 15:
+                    ah = aB.sent;
+                    aB.next = 18;
+                    return null == af ? undefined : af.refresh_cookie(ah);
+                  case 18:
+                    if (!af.ckStatus) {
+                      {
+                        aB.next = 107;
+                        break;
+                      }
+                    }
+                    aB.next = 21;
+                    return af.getPoint();
+                  case 21:
+                    if (aB.t1 = ai = aB.sent, aB.t0 = null !== aB.t1, !aB.t0) {
+                      {
+                        aB.next = 25;
+                        break;
+                      }
+                    }
+                    aB.t0 = undefined !== ai;
+                  case 25:
+                    if (!aB.t0) {
+                      {
+                        aB.next = 29;
+                        break;
+                      }
+                    }
+                    aB.t2 = ai;
+                    aB.next = 30;
+                    break;
+                  case 29:
+                    aB.t2 = {};
+                  case 30:
+                    ak = aB.t2;
+                    aB.next = 33;
+                    return af.signin();
+                  case 33:
+                    aB.next = 35;
+                    return null == af ? undefined : af.getTaskList();
+                  case 35:
+                    al = aB.sent;
+                    am = A(al);
+                    aB.prev = 37;
+                    am.s();
+                  case 39:
+                    if ((an = am.n()).done) {
+                      {
+                        aB.next = 83;
+                        break;
+                      }
+                    }
+                    ao = an.value;
+                    aB.t3 = null == ao ? undefined : ao.status;
+                    aB.next = 2 === aB.t3 ? 44 : 1 === aB.t3 ? 76 : 81;
+                    break;
+                  case 44:
+                    if (!/生活特权/.test(null == ao ? undefined : ao.title)) {
+                      {
+                        aB.next = 74;
+                        break;
+                      }
+                    }
+                    aB.next = 47;
+                    return null == af ? undefined : af.getCoupomList();
+                  case 47:
+                    ap = aB.sent;
+                    aq = A(ap);
+                    aB.prev = 49;
+                    aq.s();
+                  case 51:
+                    if ((ar = aq.n()).done) {
+                      {
+                        aB.next = 64;
+                        break;
+                      }
+                    }
+                    if (au = ar.value, av = null !== (as = null == au ? undefined : au.exchangeStatus) && undefined !== as ? as : -1, aw = null !== (at = null == au ? undefined : au.exchangeMemLevel) && undefined !== at ? at : -1, !(av < 2 && 0 == aw)) {
+                      {
+                        aB.next = 62;
+                        break;
+                      }
+                    }
+                    ax = au.goodsNo;
+                    aB.next = 59;
+                    return af.getCoupom(ao, ax);
+                  case 59:
+                    ay = aB.sent;
+                    ay && ($.info("[".concat(af.userName || af.index, "] 当前选择券号：").concat(ax)), $.info("[".concat(af.userName || af.index, "] 领券结果：").concat(ay)));
+                    return aB.abrupt("break", 64);
+                  case 62:
+                    aB.next = 51;
+                    break;
+                  case 64:
+                    aB.next = 69;
+                    break;
+                  case 66:
+                    aB.prev = 66;
+                    aB.t4 = aB.catch(49);
+                    aq.e(aB.t4);
+                  case 69:
+                    aB.prev = 69;
+                    aq.f();
+                    return aB.finish(69);
+                  case 72:
+                    aB.next = 76;
+                    break;
+                  case 74:
+                    aB.next = 76;
+                    return null == af ? undefined : af.finishTask(ao);
+                  case 76:
+                    aB.next = 78;
+                    return null == af ? undefined : af.reportTask(ao);
+                  case 78:
+                    aB.next = 80;
+                    return null == af ? undefined : af.reviceReward(ao);
+                  case 80:
+                    return aB.abrupt("break", 81);
+                  case 81:
+                    aB.next = 39;
+                    break;
+                  case 83:
+                    aB.next = 88;
+                    break;
+                  case 85:
+                    aB.prev = 85;
+                    aB.t5 = aB.catch(37);
+                    am.e(aB.t5);
+                  case 88:
+                    aB.prev = 88;
+                    am.f();
+                    return aB.finish(88);
+                  case 91:
+                    aB.next = 93;
+                    return af.getPoint();
+                  case 93:
+                    if (aB.t7 = aj = aB.sent, aB.t6 = null !== aB.t7, !aB.t6) {
+                      {
+                        aB.next = 97;
+                        break;
+                      }
+                    }
+                    aB.t6 = undefined !== aj;
+                  case 97:
+                    if (!aB.t6) {
+                      {
+                        aB.next = 101;
+                        break;
+                      }
+                    }
+                    aB.t8 = aj;
+                    aB.next = 102;
+                    break;
+                  case 101:
+                    aB.t8 = {};
+                  case 102:
+                    az = aB.t8;
+                    $.notifyMsg.push("[".concat(af.userName, "] 积分:").concat(ak).concat(az >= ak ? "+" : "").concat(az - 0 - ak));
+                    $.succCount++;
+                    aB.next = 109;
+                    break;
+                  case 107:
+                    $.error("[".concat(null == af ? undefined : af.userName, "] ck已失效，用户需要去登录"));
+                    $.notifyMsg.push("[".concat(null == af ? undefined : af.userName, "] 积分:ck已失效，用户需要去登录"));
+                  case 109:
+                    aB.next = 114;
+                    break;
+                  case 111:
+                    throw aB.prev = 111, aB.t9 = aB.catch(6), aB.t9;
+                  case 114:
+                    aB.next = 3;
+                    break;
+                  case 116:
+                    aB.next = 121;
+                    break;
+                  case 118:
+                    aB.prev = 118;
+                    aB.t10 = aB.catch(1);
+                    ad.e(aB.t10);
+                  case 121:
+                    aB.prev = 121;
+                    ad.f();
+                    return aB.finish(121);
+                  case 124:
+                    $.title = "共".concat($.userList.length, "个账号,成功").concat($.succCount, "个,失败").concat($.userList.length - 0 - $.succCount, "个");
+                    aB.next = 127;
+                    return a2($.notifyMsg.join("\n"), {
+                      $media: $.avatar
+                    });
+                  case 127:
+                  case "end":
+                    return aB.stop();
+                }
+              }
+            }
+          }, ab, null, [[1, 118, 121, 124], [6, 111], [37, 85, 88, 91], [49, 66, 69, 72]]);
+        }
+      }));
+      return Y.apply(this, arguments);
+    }
+  }
+  $.userIdx = 0;
+  $.userList = [];
+  $.notifyMsg = [];
+  $.succCount = 0;
+  $.is_debug = ($.isNode() ? process.env.IS_DEDUG : $.getdata("is_debug")) || "false";
+  $.unTaskList = ["完成连签7天", "参与积分活动", "每月累计寄件", "完成每月任务", "与好友微信分享会员福利", "去新增一个收件偏好", "用行业模板寄件下单", "用积分兑任意礼品", "设置你的顺丰ID"];
+  var Z = function () {
+    var a9 = {
+      KBCcb: "STvRc",
+      IimWg: "end",
+      VCcmm: function (aq, ar) {
+        return aq !== ar;
+      },
+      SHJuJ: "wqWMu",
+      SgEbq: function (aq, ar) {
+        return aq === ar;
+      },
+      xXozV: "OQQan",
+      TmaNz: function (aq, ar) {
+        return aq == ar;
+      },
+      gIVbJ: "function",
+      ZKZVS: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~integralTaskSignPlusService~automaticSignFetchPackage",
+      lTgsR: "post",
+      olrHP: "SFAPP",
+      nzCJh: "] 签到:",
+      kerJl: function (aq, ar) {
+        return aq == ar;
+      },
+      sdtgK: function (aq, ar) {
+        return aq === ar;
+      },
+      ovGbm: "GeneratorFunction",
+      JIkEY: "aHjTt",
+      JqBzR: "JYVMu",
+      JSAVL: "Cannot call a class as a function",
+      ClXgq: "vJEfE",
+      gyxCU: function (aq, ar) {
+        return aq == ar;
+      },
+      cWqyc: function (aq, ar) {
+        return aq == ar;
+      },
+      PQIjQ: "https://userone.angelgroup.com.cn",
+      bbrPh: "application/json",
+      NNvlQ: "⛔️ script run error!",
+      OujFX: function (aq, ar) {
+        return aq === ar;
+      },
+      isxLs: "json",
+      gFFkd: "return",
+      ZhUEa: function (aq, ar) {
+        return aq === ar;
+      },
+      tQxzV: function (aq, ar) {
+        return aq === ar;
+      },
+      daeQO: "OrYfX",
+      LbpqI: function (aq, ar) {
+        return aq(ar);
+      },
+      tWDwT: "DWztT",
+      vyLBH: function (aq, ar) {
+        return aq === ar;
+      },
+      SwiXE: function (aq, ar) {
+        return aq === ar;
+      },
+      YaLLZ: function (aq, ar) {
+        return aq === ar;
+      },
+      lKGoA: "MquiK",
+      TeHaE: function (aq) {
+        return aq();
+      },
+      qilMu: function (aq, ar) {
+        return aq !== ar;
+      },
+      zjmhV: "xdArl",
+      jGnMQ: "soijx",
+      BhKkR: function (aq, ar) {
+        return aq !== ar;
+      },
+      BWqoS: "hSUsR",
+      wIoOO: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberIntegral~userInfoService~queryUserInfo",
+      XHuvl: "usablePoint",
+      rHDTy: "cycleSub",
+      wWaIP: "leavePoint",
+      bqLaH: "zeTLTYeG0bLetfRk",
+      VyDMr: "] 当前积分:",
+      ShtlW: function (aq, ar) {
+        return aq == ar;
+      },
+      HSWjn: function (aq, ar) {
+        return aq === ar;
+      },
+      FmGPS: "next",
+      wihZp: function (aq, ar) {
+        return aq(ar);
+      },
+      EmaNr: "hNsIo",
+      KdIYQ: "vioin",
+      yIrIC: function (aq, ar) {
+        return aq == ar;
+      },
+      QmABI: "throw",
+      nrdzt: function (aq, ar) {
+        return aq || ar;
+      },
+      OfmrI: function (aq, ar) {
+        return aq == ar;
+      },
+      SRSKQ: function (aq, ar) {
+        return aq > ar;
+      },
+      eSQXJ: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonRoutePost/memberEs/taskRecord/finishTask",
+      EvaGo: function (aq, ar, as) {
+        return aq(ar, as);
+      },
+      hsxZM: "] 完成[",
+      rcqNs: "]任务:",
+      Dyitn: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~integralTaskStrategyService~fetchIntegral",
+      rAXlI: "] 领取[",
+      akQSM: "https://ccsp-egmas.sf-express.com/cx-app-member/member/app/memberActivity/reportTask",
+      TdFXD: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberGoods~pointMallService~createOrder",
+      dooEc: "Point_Mall",
+      TiRnJ: "POINT_MALL_EXCHANGE",
+      hHHEm: function (aq) {
+        return aq();
+      }
+    };
+    var aa = {
+      writable: false
+    };
+    ab = function aq(ar) {
+      {
+        (function (aw, ax) {
+          {
+            if (!(aw instanceof ax)) {
+              throw new TypeError("Cannot call a class as a function");
+            }
+          }
+        })(this, aq);
+        this.index = ++$.userIdx;
+        this.avatar = ar.avatar;
+        this.ckStatus = true;
+        this.userId = ar.userId;
+        this.phone = ar.phone;
+        this.userName = (null == ar ? undefined : ar.userName) || (null == this ? undefined : this.phone) || this.userId || this.index;
+        this.token = ar.token || ar;
+        this.baseUrl = "https://userone.angelgroup.com.cn";
+        this.headers = {
+          "content-type": "application/json"
+        };
+        at = this;
+        au = this.handleError;
+        return new Proxy(at, {
+          get: function (aw, ax) {
+            {
+              var az = aw[ax];
+              return "function" == typeof az ? Q(F().mark(function aB() {
+                {
+                  var aD;
+                  var aE;
+                  var aF;
+                  var aG = arguments;
+                  return F().wrap(function (aI) {
+                    {
+                      for (;;) {
+                        switch (aI.prev = aI.next) {
+                          case 0:
+                            for (aI.prev = 0, aD = aG.length, aE = new Array(aD), aF = 0; aF < aD; aF++) {
+                              aE[aF] = aG[aF];
+                            }
+                            aI.next = 4;
+                            return az.apply(aw, aE);
+                          case 4:
+                            return aI.abrupt("return", aI.sent);
+                          case 7:
+                            aI.prev = 7;
+                            aI.t0 = aI.catch(0);
+                            au.call(aw, aI.t0);
+                          case 10:
+                          case "end":
+                            return aI.stop();
+                        }
+                      }
+                    }
+                  }, aB, null, [[0, 7]]);
+                }
+              })) : az;
+            }
+          }
+        });
+        var at;
+        var au;
+      }
+    };
+    ac = [{
+      key: "handleError",
+      value: function (ar) {
+        this.ckStatus = false;
+        $.error("[".concat(this.userName, "] 发生错误：").concat(ar.message));
+      }
+    }, {
+      key: "fetch",
+      value: (ap = Q(F().mark(function ar(as) {
+        {
+          var au;
+          var av;
+          var aw;
+          return F().wrap(function (ax) {
+            {
+              for (;;) {
+                switch (ax.prev = ax.next) {
+                  case 0:
+                    au = "string" == typeof as ? {
+                      url: as
+                    } : as;
+                    av = new URL(au.url || "", this.baseUrl).href;
+                    ax.next = 4;
+                    return a7(H(H({}, au), {}, {
+                      headers: au.headers || this.headers,
+                      url: av
+                    }));
+                  case 4:
+                    aw = ax.sent;
+                    a6(aw, av.replace(/\/+$/, "").substring(av.lastIndexOf("/") + 1));
+                    return ax.abrupt("return", aw);
+                  case 7:
+                  case "end":
+                    return ax.stop();
+                }
+              }
+            }
+          }, ar, this);
+        }
+      })), function (as) {
+        {
+          return ap.apply(this, arguments);
+        }
+      })
+    }, {
+      key: "verify",
+      value: (ao = Q(F().mark(function as() {
+        {
+          var au;
+          var av;
+          return F().wrap(function (aw) {
+            {
+              for (;;) {
+                switch (aw.prev = aw.next) {
+                  case 0:
+                    au = {
+                      url: "".concat(U, "/token/verify"),
+                      headers: {
+                        "Content-Type": "application/json"
+                      },
+                      type: "post",
+                      dataType: "json",
+                      body: {
+                        token: R,
+                        type: "SYSY",
+                        userId: this.userId
+                      }
+                    };
+                    aw.next = 3;
+                    return this.fetch(au);
+                  case 3:
+                    if (av = aw.sent, av) {
+                      {
+                        aw.next = 6;
+                        break;
+                      }
+                    }
+                    throw new Error(null == av ? undefined : av.message);
+                  case 6:
+                    return aw.abrupt("return", av);
+                  case 7:
+                  case "end":
+                    return aw.stop();
+                }
+              }
+            }
+          }, as, this);
+        }
+      })), function () {
+        return ao.apply(this, arguments);
+      })
+    }, {
+      key: "login",
+      value: (an = Q(F().mark(function at() {
+        {
+          var av;
+          var aw;
+          var ax;
+          var ay;
+          var az;
+          var aA;
+          return F().wrap(function (aC) {
+            {
+              for (;;) {
+                switch (aC.prev = aC.next) {
+                  case 0:
+                    delete this.token.headers.cookie;
+                    az = {
+                      url: null === (av = this.token) || undefined === av ? undefined : av.url,
+                      type: "post",
+                      dataType: "json",
+                      headers: null === (aw = this.token) || undefined === aw ? undefined : aw.headers,
+                      body: null === (ax = this.token) || undefined === ax ? undefined : ax.body
+                    };
+                    aC.next = 4;
+                    return this.fetch(az);
+                  case 4:
+                    aA = aC.sent;
+                    return aC.abrupt("return", null == aA || null === (ay = aA.obj) || undefined === ay ? undefined : ay.sign);
+                  case 6:
+                  case "end":
+                    return aC.stop();
+                }
+              }
+            }
+          }, at, this);
+        }
+      })), function () {
+        {
+          return an.apply(this, arguments);
+        }
+      })
+    }, {
+      key: "refresh_cookie",
+      value: (am = Q(F().mark(function au(av) {
+        {
+          return F().wrap(function (ax) {
+            {
+              for (;;) {
+                switch (ax.prev = ax.next) {
+                  case 0:
+                    ax.next = 2;
+                    return this.fetch({
+                      url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/share/app/shareRedirect?sign=".concat(encodeURIComponent(av), "&source=SFAPP&bizCode=647@RnlvejM1R3VTSVZ6d3BNaXJxRFpOUVVtQkp0ZnFpNDBKdytobm5TQWxMeHpVUXVrVzVGMHVmTU5BVFA1bXlwcw=="),
+                      type: "get",
+                      followRedirect: false
+                    });
+                  case 2:
+                  case 3:
+                  case "end":
+                    return ax.stop();
+                }
+              }
+            }
+          }, au, this);
+        }
+      })), function (av) {
+        return am.apply(this, arguments);
+      })
+    }, {
+      key: "getPoint",
+      value: (al = Q(F().mark(function av() {
+        {
+          var ax;
+          var ay;
+          var az;
+          var aA;
+          return F().wrap(function (aB) {
+            {
+              for (;;) {
+                switch (aB.prev = aB.next) {
+                  case 0:
+                    var aC = {
+                      url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberIntegral~userInfoService~queryUserInfo",
+                      type: "post",
+                      dataType: "json",
+                      body: {}
+                    };
+                    aC.body.sysCode = "ESG-CEMP-CORE";
+                    aC.body.optionalColumns = ["usablePoint", "cycleSub", "leavePoint"];
+                    aC.body.token = "zeTLTYeG0bLetfRk";
+                    az = aC;
+                    aB.next = 3;
+                    return this.fetch(az);
+                  case 3:
+                    aA = aB.sent;
+                    $.info("[".concat(this.userName, "] 当前积分:").concat(null == aA || null === (ax = aA.obj) || undefined === ax ? undefined : ax.usablePoint));
+                    return aB.abrupt("return", null == aA || null === (ay = aA.obj) || undefined === ay ? undefined : ay.usablePoint);
+                  case 6:
+                  case "end":
+                    return aB.stop();
+                }
+              }
+            }
+          }, av, this);
+        }
+      })), function () {
+        return al.apply(this, arguments);
+      })
+    }, {
+      key: "signin",
+      value: (ak = Q(F().mark(function aw() {
+        {
+          var ay;
+          var az;
+          return F().wrap(function (aA) {
+            {
+              for (;;) {
+                switch (aA.prev = aA.next) {
+                  case 0:
+                    var aB = {
+                      url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~integralTaskSignPlusService~automaticSignFetchPackage",
+                      type: "post",
+                      dataType: "json",
+                      body: {}
+                    };
+                    aB.body.comeFrom = "vioin";
+                    aB.body.channelFrom = "SFAPP";
+                    ay = aB;
+                    aA.next = 3;
+                    return this.fetch(ay);
+                  case 3:
+                    az = aA.sent;
+                    $.info("[".concat(this.userName, "] 签到:").concat((null == az ? undefined : az.errorMessage) || (null == az ? undefined : az.success)));
+                  case 5:
+                  case "end":
+                    return aA.stop();
+                }
+              }
+            }
+          }, aw, this);
+        }
+      })), function () {
+        return ak.apply(this, arguments);
+      })
+    }, {
+      key: "getTaskList",
+      value: (aj = Q(F().mark(function ax(ay) {
+        var az;
+        var aA;
+        var aB;
+        var aC;
+        return F().wrap(function (aD) {
+          for (;;) {
+            switch (aD.prev = aD.next) {
+              case 0:
+                aA = {
+                  url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~integralTaskStrategyService~queryPointTaskAndSignFromES",
+                  type: "post",
+                  dataType: "json",
+                  body: {
+                    channelType: ay || "1"
+                  }
+                };
+                aD.next = 3;
+                return this.fetch(aA);
+              case 3:
+                aB = aD.sent;
+                aC = null == aB || null === (az = aB.obj) || undefined === az ? undefined : az.taskTitleLevels.filter(function (aF) {
+                  return !$.unTaskList.includes(aF.title);
+                });
+                aC.forEach(function (aF) {
+                  if (null == aF || !aF.taskCode) {
+                    var aG = decodeURIComponent($.toStr(null == aF ? undefined : aF.buttonRedirect)).match(/"taskId"\s*:\s*"([^"]+)"/);
+                    var aH = B(aG, 2);
+                    var aI = aH[1];
+                    aF.taskCode = aI;
+                  }
+                });
+                return aD.abrupt("return", aC);
+              case 7:
+              case "end":
+                return aD.stop();
+            }
+          }
+        }, ax, this);
+      })), function (ay) {
+        return aj.apply(this, arguments);
+      })
+    }, {
+      key: "finishTask",
+      value: (ai = Q(F().mark(function ay(az) {
+        var aA;
+        var aB;
+        var aC;
+        var aD = arguments;
+        return F().wrap(function (aE) {
+          for (;;) {
+            switch (aE.prev = aE.next) {
+              case 0:
+                var aF = {
+                  taskCode: az.taskCode
+                };
+                aA = aD.length > 1 && undefined !== aD[1] ? aD[1] : {};
+                aB = {
+                  url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonRoutePost/memberEs/taskRecord/finishTask",
+                  type: "post",
+                  dataType: "json",
+                  body: H(aF, aA)
+                };
+                aE.next = 4;
+                return this.fetch(aB);
+              case 4:
+                aC = aE.sent;
+                $.info("[".concat(this.userName, "] 完成[").concat(az.title, "]任务:").concat(aC.success));
+              case 6:
+              case "end":
+                return aE.stop();
+            }
+          }
+        }, ay, this);
+      })), function (az) {
+        return ai.apply(this, arguments);
+      })
+    }, {
+      key: "reviceReward",
+      value: (ah = Q(F().mark(function az(aA) {
+        var aB;
+        var aC;
+        return F().wrap(function (aD) {
+          for (;;) {
+            switch (aD.prev = aD.next) {
+              case 0:
+                var aE = {
+                  strategyId: aA.strategyId,
+                  taskId: aA.taskId,
+                  taskCode: aA.taskCode,
+                  channelType: "1"
+                };
+                var aF = {
+                  url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberNonactivity~integralTaskStrategyService~fetchIntegral",
+                  type: "post",
+                  dataType: "json",
+                  body: aE
+                };
+                aB = aF;
+                aD.next = 3;
+                return this.fetch(aB);
+              case 3:
+                aC = aD.sent;
+                $.info("[".concat(this.userName, "] 领取[").concat(aA.title, "]奖励:").concat(aC.success));
+              case 5:
+              case "end":
+                return aD.stop();
+            }
+          }
+        }, az, this);
+      })), function (aA) {
+        return ah.apply(this, arguments);
+      })
+    }, {
+      key: "reportTask",
+      value: (ag = Q(F().mark(function aA(aB) {
+        var aC;
+        var aD;
+        return F().wrap(function (aE) {
+          for (;;) {
+            switch (aE.prev = aE.next) {
+              case 0:
+                var aF = {
+                  mobile: this.userName,
+                  taskCode: aB.taskCode
+                };
+                var aG = {
+                  url: "https://ccsp-egmas.sf-express.com/cx-app-member/member/app/memberActivity/reportTask",
+                  type: "post",
+                  dataType: "json",
+                  body: aF
+                };
+                aC = aG;
+                aE.next = 3;
+                return this.fetch(aC);
+              case 3:
+                aD = aE.sent;
+                $.info("[".concat(this.userName, "] 上报[").concat(aB.title, "]任务:").concat(aD.success));
+              case 5:
+              case "end":
+                return aE.stop();
+            }
+          }
+        }, aA, this);
+      })), function (aB) {
+        return ag.apply(this, arguments);
+      })
+    }, {
+      key: "getCoupomList",
+      value: (af = Q(F().mark(function aB() {
+        var aD;
+        var aE;
+        var aF;
+        var aG;
+        var aH;
+        var aI;
+        return F().wrap(function (aJ) {
+          for (;;) {
+            switch (aJ.prev = aJ.next) {
+              case 0:
+                var aK = {
+                  url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberGoods~mallGoodsLifeService~list",
+                  type: "post",
+                  dataType: "json",
+                  body: {}
+                };
+                aK.body.memGrade = 3;
+                aK.body.categoryCode = "SHTQ";
+                aD = aK;
+                aJ.next = 3;
+                return this.fetch(aD);
+              case 3:
+                aE = aJ.sent;
+                aF = [];
+                aG = A(aE.obj);
+                try {
+                  for (aG.s(); !(aH = aG.n()).done;) {
+                    aI = aH.value;
+                    aF.push.apply(aF, z(aI.goodsList || []));
+                  }
+                } catch (aL) {
+                  aG.e(aL);
+                } finally {
+                  aG.f();
+                }
+                return aJ.abrupt("return", aF.filter(function (aM) {
+                  var aN;
+                  return (null !== (aN = null == aM ? undefined : aM.currentStore) && undefined !== aN ? aN : 0) > 0;
+                }));
+              case 8:
+              case "end":
+                return aJ.stop();
+            }
+          }
+        }, aB, this);
+      })), function () {
+        return af.apply(this, arguments);
+      })
+    }, {
+      key: "getCoupom",
+      value: (ae = Q(F().mark(function aC(aD, aE) {
+        var aF;
+        var aG;
+        var aH;
+        return F().wrap(function (aI) {
+          for (;;) {
+            switch (aI.prev = aI.next) {
+              case 0:
+                var aJ = {
+                  url: "https://mcs-mimp-web.sf-express.com/mcs-mimp/commonPost/~memberGoods~pointMallService~createOrder",
+                  type: "post",
+                  dataType: "json",
+                  body: {}
+                };
+                aJ.body.from = "Point_Mall";
+                aJ.body.orderSource = "POINT_MALL_EXCHANGE";
+                aJ.body.goodsNo = aE;
+                aJ.body.quantity = 1;
+                aJ.body.taskCode = aD.taskCode;
+                aG = aJ;
+                aI.next = 3;
+                return this.fetch(aG);
+              case 3:
+                aH = aI.sent;
+                return aI.abrupt("return", null == aH || null === (aF = aH.obj) || undefined === aF ? undefined : aF.orderNo);
+              case 5:
+              case "end":
+                return aI.stop();
+            }
+          }
+        }, aC, this);
+      })), function (aD, aE) {
+        return ae.apply(this, arguments);
+      })
+    }];
+    ac && J(ab.prototype, ac);
+    ad && J(ab, ad);
+    Object.defineProperty(ab, "prototype", aa);
+    return ab;
+    var ab;
+    var ac;
+    var ad;
+    var ae;
+    var af;
+    var ag;
+    var ah;
+    var ai;
+    var aj;
+    var ak;
+    var al;
+    var am;
+    var an;
+    var ao;
+    var ap;
+  }();
+  function a0() {
+    return a1.apply(this, arguments);
+  }
+  function a1() {
+    a1 = Q(F().mark(function aa() {
+      var ac;
+      var ad;
+      var ae;
+      var af;
+      var ag;
+      var ah;
+      var ai;
+      return F().wrap(function (aj) {
+        for (;;) {
+          switch (aj.prev = aj.next) {
+            case 0:
+              if (aj.prev = 0, !$request || "OPTIONS" !== $request.method) {
+                aj.next = 3;
+                break;
+              }
+              return aj.abrupt("return");
+            case 3:
+              if (ad = $.toObj($request.body), ae = null == ad ? undefined : ad.userId, af = {
+                url: $request.url,
+                headers: (am = $request.headers, am ? Object.fromEntries(Object.entries(am).map(function (an) {
+                  var ao = B(an, 2);
+                  var ap = ao[0];
+                  var aq = ao[1];
+                  return [ap.toLowerCase(), aq];
+                })) : {}),
+                body: null === (ac = $request) || undefined === ac ? undefined : ac.body
+              }, ag = null == ad ? undefined : ad.mobile, ae && af && ag) {
+                aj.next = 9;
+                break;
+              }
+              throw new Error("获取token失败！参数缺失");
+            case 9:
+              var al = {
+                userId: ae,
+                token: af,
+                userName: ag
+              };
+              ah = al;
+              ai = W.findIndex(function (an) {
+                return an.userId == ah.userId;
+              });
+              W[ai] ? W[ai] = ah : W.push(ah);
+              $.setjson(W, V);
+              $.msg($.name, "🎉账号[".concat(ah.userName, "]更新token成功!"), "");
+              aj.next = 19;
+              break;
+            case 16:
+              throw aj.prev = 16, aj.t0 = aj.catch(0), aj.t0;
+            case 19:
+            case "end":
+              return aj.stop();
+          }
+        }
+        var am;
+      }, aa, null, [[0, 16]]);
+    }));
+    return a1.apply(this, arguments);
+  }
+  function a2(a9, aa) {
+    return a3.apply(this, arguments);
+  }
+  function a3() {
+    a3 = Q(F().mark(function aa(ab, ac) {
+      return F().wrap(function (ad) {
+        for (;;) {
+          switch (ad.prev = ad.next) {
+            case 0:
+              if (ad.t0 = ab, !ad.t0) {
+                ad.next = 8;
+                break;
+              }
+              if (!$.isNode()) {
+                ad.next = 7;
+                break;
+              }
+              ad.next = 5;
+              return notify.sendNotify($.name, ab);
+            case 5:
+              ad.next = 8;
+              break;
+            case 7:
+              $.msg($.name, $.title || "", ab, ac);
+            case 8:
+            case "end":
+              return ad.stop();
+          }
+        }
+      }, aa);
+    }));
+    return a3.apply(this, arguments);
+  }
+  function a4() {
+    return a5.apply(this, arguments);
+  }
+  function a5() {
+    a5 = Q(F().mark(function aa() {
+      var ac;
+      var ad;
+      return F().wrap(function (ae) {
+        for (;;) {
+          switch (ae.prev = ae.next) {
+            case 0:
+              if (ae.prev = 0, null != W && W.length) {
+                ae.next = 3;
+                break;
+              }
+              throw new Error("no available accounts found");
+            case 3:
+              $.log("\n[INFO] 检测到 ".concat(null !== (ac = null == W ? undefined : W.length) && undefined !== ac ? ac : 0, " 个账号\n"));
+              (ad = $.userList).push.apply(ad, z(W.map(function (af) {
+                return new Z(af);
+              }).filter(Boolean)));
+              ae.next = 9;
+              break;
+            case 6:
+              throw ae.prev = 6, ae.t0 = ae.catch(0), ae.t0;
+            case 9:
+            case "end":
+              return ae.stop();
+          }
+        }
+      }, aa, null, [[0, 6]]);
+    }));
+    return a5.apply(this, arguments);
+  }
+  function a6(a9) {
+    var aa = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : "debug";
+    "true" === $.is_debug && ($.log("\n-----------".concat(aa, "------------\n")), $.log("string" == typeof a9 ? a9 : $.toStr(a9) || "debug error => t=".concat(a9)), $.log("\n-----------".concat(aa, "------------\n")));
+  }
+  function a7(a9) {
+    return a8.apply(this, arguments);
+  }
+  function a8() {
+    a8 = Q(F().mark(function aa(ab) {
+      var ac;
+      var ad;
+      var ae;
+      var af;
+      var ag;
+      var ah;
+      var ai;
+      var aj;
+      var ak;
+      var al;
+      var am;
+      var an;
+      var ao;
+      var ap;
+      var aq;
+      var ar;
+      var as;
+      var at;
+      var au;
+      return F().wrap(function (av) {
+        for (;;) {
+          switch (av.prev = av.next) {
+            case 0:
+              if ("string" == typeof ab && (ab = {
+                url: ab
+              }), av.prev = 1, null !== (ac = ab) && undefined !== ac && ac.url) {
+                av.next = 4;
+                break;
+              }
+              throw new Error("[URL][ERROR] 缺少 url 参数");
+            case 4:
+              ae = ab;
+              af = ae.url;
+              ag = ae.type;
+              ah = ae.headers;
+              ai = undefined === ah ? {} : ah;
+              aj = ae.body;
+              ak = ae.params;
+              al = ae.dataType;
+              am = undefined === al ? "form" : al;
+              an = ae.resultType;
+              ao = undefined === an ? "data" : an;
+              ap = ag ? null == ag ? undefined : ag.toLowerCase() : "body" in ab ? "post" : "get";
+              aq = af.concat("post" === ap ? "?" + $.queryStr(ak) : "");
+              ar = ab.timeout ? $.isSurge() ? ab.timeout / 1000 : ab.timeout : 10000;
+              "json" === am && (ai["Content-Type"] = "application/json;charset=UTF-8");
+              as = "string" == typeof aj ? aj : aj && "form" == am ? $.queryStr(aj) : $.toStr(aj);
+              at = H(H(H(H(H({}, ab), null !== (ad = ab) && undefined !== ad && ad.opts ? ab.opts : {}), {}, {
+                url: aq,
+                headers: ai
+              }, "post" === ap && {
+                body: as
+              }), "get" === ap && ak && {
+                params: ak
+              }), {}, {
+                timeout: ar
+              });
+              au = $.http[ap.toLowerCase()](at).then(function (ax) {
+                return "data" == ao ? $.toObj(ax.body) || ax.body : $.toObj(ax) || ax;
+              }).catch(function (ax) {
+                return $.log("[".concat(ap.toUpperCase(), "][ERROR] ").concat(ax, "\n"));
+              });
+              return av.abrupt("return", Promise.race([new Promise(function (ax, ay) {
+                return setTimeout(function () {
+                  return ay("当前请求已超时");
+                }, ar);
+              }), au]));
+            case 11:
+              av.prev = 11;
+              av.t0 = av.catch(1);
+              console.log("[".concat(p.toUpperCase(), "][ERROR] ").concat(av.t0, "\n"));
+            case 14:
+            case "end":
+              return av.stop();
+          }
+        }
+      }, aa, null, [[1, 11]]);
+    }));
+    return a8.apply(this, arguments);
+  }
+  Q(F().mark(function a9() {
+    return F().wrap(function (aa) {
+      for (;;) {
+        switch (aa.prev = aa.next) {
+          case 0:
+            if ("undefined" == typeof $request) {
+              aa.next = 5;
+              break;
+            }
+            aa.next = 3;
+            return a0();
+          case 3:
+            aa.next = 9;
+            break;
+          case 5:
+            aa.next = 7;
+            return a4();
+          case 7:
+            aa.next = 9;
+            return X();
+          case 9:
+          case "end":
+            return aa.stop();
+        }
+      }
+    }, a9);
+  }))().catch(function (aa) {
+    $.logErr(aa);
+    $.msg($.name, "⛔️ script run error!", aa.message || aa);
+  }).finally(function () {
+    return $.done();
+  });
+})();
+function Env(t, e) {
+  class s {
+    constructor(t) {
+      this.env = t;
+    }
+    send(t, e = "GET") {
+      t = "string" == typeof t ? {
+        url: t
+      } : t;
+      let s = this.get;
+      "POST" === e && (s = this.post);
+      return new Promise((e, i) => {
+        s.call(this, t, (t, s, o) => {
+          t ? i(t) : e(s);
+        });
+      });
+    }
+    get(t) {
+      return this.send.call(this.env, t);
+    }
+    post(t) {
+      return this.send.call(this.env, t, "POST");
+    }
+  }
+  return new class {
+    constructor(t, e) {
+      this.logLevels = {
+        debug: 0,
+        info: 1,
+        warn: 2,
+        error: 3
+      };
+      this.logLevelPrefixs = {
+        debug: "[DEBUG] ",
+        info: "[INFO] ",
+        warn: "[WARN] ",
+        error: "[ERROR] "
+      };
+      this.logLevel = "info";
+      this.name = t;
+      this.http = new s(this);
+      this.data = null;
+      this.dataFile = "box.dat";
+      this.logs = [];
+      this.isMute = false;
+      this.isNeedRewrite = false;
+      this.logSeparator = "\n";
+      this.encoding = "utf-8";
+      this.startTime = new Date().getTime();
+      Object.assign(this, e);
+      this.log("", `🔔${this.name}, 开始!`);
+    }
+    getEnv() {
+      return "undefined" != typeof $environment && $environment["surge-version"] ? "Surge" : "undefined" != typeof $environment && $environment["stash-version"] ? "Stash" : "undefined" != typeof module && module.exports ? "Node.js" : "undefined" != typeof $task ? "Quantumult X" : "undefined" != typeof $loon ? "Loon" : "undefined" != typeof $rocket ? "Shadowrocket" : undefined;
+    }
+    isNode() {
+      return "Node.js" === this.getEnv();
+    }
+    isQuanX() {
+      return "Quantumult X" === this.getEnv();
+    }
+    isSurge() {
+      return "Surge" === this.getEnv();
+    }
+    isLoon() {
+      return "Loon" === this.getEnv();
+    }
+    isShadowrocket() {
+      return "Shadowrocket" === this.getEnv();
+    }
+    isStash() {
+      return "Stash" === this.getEnv();
+    }
+    toObj(t, e = null) {
+      try {
+        return JSON.parse(t);
+      } catch {
+        return e;
+      }
+    }
+    toStr(t, e = null, ...s) {
+      try {
+        return JSON.stringify(t, ...s);
+      } catch {
+        return e;
+      }
+    }
+    getjson(t, e) {
+      let s = e;
+      if (this.getdata(t)) {
+        try {
+          s = JSON.parse(this.getdata(t));
+        } catch {}
+      }
+      return s;
+    }
+    setjson(t, e) {
+      try {
+        return this.setdata(JSON.stringify(t), e);
+      } catch {
+        return false;
+      }
+    }
+    getScript(t) {
+      return new Promise(e => {
+        this.get({
+          url: t
+        }, (t, s, i) => e(i));
+      });
+    }
+    runScript(t, e) {
+      return new Promise(s => {
+        let i = this.getdata("@chavy_boxjs_userCfgs.httpapi");
+        i = i ? i.replace(/\n/g, "").trim() : i;
+        let o = this.getdata("@chavy_boxjs_userCfgs.httpapi_timeout");
+        o = o ? 1 * o : 20;
+        o = e && e.timeout ? e.timeout : o;
+        const [r, a] = i.split("@");
+        const n = {
+          url: `http://${a}/v1/scripting/evaluate`,
+          body: {
+            script_text: t,
+            mock_type: "cron",
+            timeout: o
+          },
+          headers: {
+            "X-Key": r,
+            Accept: "*/*"
+          },
+          timeout: o
+        };
+        this.post(n, (t, e, i) => s(i));
+      }).catch(t => this.logErr(t));
+    }
+    loaddata() {
+      if (!this.isNode()) {
+        return {};
+      }
+      {
+        this.fs = this.fs ? this.fs : require("fs");
+        this.path = this.path ? this.path : require("path");
+        const t = this.path.resolve(this.dataFile);
+        const e = this.path.resolve(process.cwd(), this.dataFile);
+        const s = this.fs.existsSync(t);
+        const i = !s && this.fs.existsSync(e);
+        if (!s && !i) {
+          return {};
+        }
+        {
+          const i = s ? t : e;
+          try {
+            return JSON.parse(this.fs.readFileSync(i));
+          } catch (t) {
+            return {};
+          }
+        }
+      }
+    }
+    writedata() {
+      if (this.isNode()) {
+        this.fs = this.fs ? this.fs : require("fs");
+        this.path = this.path ? this.path : require("path");
+        const t = this.path.resolve(this.dataFile);
+        const e = this.path.resolve(process.cwd(), this.dataFile);
+        const s = this.fs.existsSync(t);
+        const i = !s && this.fs.existsSync(e);
+        const o = JSON.stringify(this.data);
+        s ? this.fs.writeFileSync(t, o) : i ? this.fs.writeFileSync(e, o) : this.fs.writeFileSync(t, o);
+      }
+    }
+    lodash_get(t, e, s) {
+      const i = e.replace(/\[(\d+)\]/g, ".$1").split(".");
+      let o = t;
+      for (const t of i) if (o = Object(o)[t], undefined === o) {
+        return s;
+      }
+      return o;
+    }
+    lodash_set(t, e, s) {
+      Object(t) !== t || (Array.isArray(e) || (e = e.toString().match(/[^.[\]]+/g) || []), e.slice(0, -1).reduce((t, s, i) => Object(t[s]) === t[s] ? t[s] : t[s] = Math.abs(e[i + 1]) >> 0 == +e[i + 1] ? [] : {}, t)[e[e.length - 1]] = s);
+      return t;
+    }
+    getdata(t) {
+      let e = this.getval(t);
+      if (/^@/.test(t)) {
+        const [, s, i] = /^@(.*?)\.(.*?)$/.exec(t);
+        const o = s ? this.getval(s) : "";
+        if (o) {
+          try {
+            const t = JSON.parse(o);
+            e = t ? this.lodash_get(t, i, "") : e;
+          } catch (t) {
+            e = "";
+          }
+        }
+      }
+      return e;
+    }
+    setdata(t, e) {
+      let s = false;
+      if (/^@/.test(e)) {
+        const [, i, o] = /^@(.*?)\.(.*?)$/.exec(e);
+        const r = this.getval(i);
+        const a = i ? "null" === r ? null : r || "{}" : "{}";
+        try {
+          const e = JSON.parse(a);
+          this.lodash_set(e, o, t);
+          s = this.setval(JSON.stringify(e), i);
+        } catch (e) {
+          const r = {};
+          this.lodash_set(r, o, t);
+          s = this.setval(JSON.stringify(r), i);
+        }
+      } else {
+        s = this.setval(t, e);
+      }
+      return s;
+    }
+    getval(t) {
+      switch (this.getEnv()) {
+        case "Surge":
+        case "Loon":
+        case "Stash":
+        case "Shadowrocket":
+          return $persistentStore.read(t);
+        case "Quantumult X":
+          return $prefs.valueForKey(t);
+        case "Node.js":
+          this.data = this.loaddata();
+          return this.data[t];
+        default:
+          return this.data && this.data[t] || null;
+      }
+    }
+    setval(t, e) {
+      switch (this.getEnv()) {
+        case "Surge":
+        case "Loon":
+        case "Stash":
+        case "Shadowrocket":
+          return $persistentStore.write(t, e);
+        case "Quantumult X":
+          return $prefs.setValueForKey(t, e);
+        case "Node.js":
+          this.data = this.loaddata();
+          this.data[e] = t;
+          this.writedata();
+          return true;
+        default:
+          return this.data && this.data[e] || null;
+      }
+    }
+    initGotEnv(t) {
+      this.got = this.got ? this.got : require("got");
+      this.cktough = this.cktough ? this.cktough : require("tough-cookie");
+      this.ckjar = this.ckjar ? this.ckjar : new this.cktough.CookieJar();
+      t && (t.headers = t.headers ? t.headers : {}, t && (t.headers = t.headers ? t.headers : {}, undefined === t.headers.cookie && undefined === t.headers.Cookie && undefined === t.cookieJar && (t.cookieJar = this.ckjar)));
+    }
+    get(t, e = () => {}) {
+      switch (t.headers && (delete t.headers["Content-Type"], delete t.headers["Content-Length"], delete t.headers["content-type"], delete t.headers["content-length"]), t.params && (t.url += "?" + this.queryStr(t.params)), undefined === t.followRedirect || t.followRedirect || ((this.isSurge() || this.isLoon()) && (t["auto-redirect"] = false), this.isQuanX() && (t.opts ? t.opts.redirection = false : t.opts = {
+        redirection: false
+      })), this.getEnv()) {
+        case "Surge":
+        case "Loon":
+        case "Stash":
+        case "Shadowrocket":
+        default:
+          this.isSurge() && this.isNeedRewrite && (t.headers = t.headers || {}, Object.assign(t.headers, {
+            "X-Surge-Skip-Scripting": false
+          }));
+          $httpClient.get(t, (t, s, i) => {
+            !t && s && (s.body = i, s.statusCode = s.status ? s.status : s.statusCode, s.status = s.statusCode);
+            e(t, s, i);
+          });
+          break;
+        case "Quantumult X":
+          this.isNeedRewrite && (t.opts = t.opts || {}, Object.assign(t.opts, {
+            hints: false
+          }));
+          $task.fetch(t).then(t => {
+            const {
+              statusCode: s,
+              statusCode: i,
+              headers: o,
+              body: r,
+              bodyBytes: a
+            } = t;
+            e(null, {
+              status: s,
+              statusCode: i,
+              headers: o,
+              body: r,
+              bodyBytes: a
+            }, r, a);
+          }, t => e(t && t.error || "UndefinedError"));
+          break;
+        case "Node.js":
+          let s = require("iconv-lite");
+          this.initGotEnv(t);
+          this.got(t).on("redirect", (t, e) => {
+            try {
+              if (t.headers["set-cookie"]) {
+                const s = t.headers["set-cookie"].map(this.cktough.Cookie.parse).toString();
+                s && this.ckjar.setCookieSync(s, null);
+                e.cookieJar = this.ckjar;
+              }
+            } catch (t) {
+              this.logErr(t);
+            }
+          }).then(t => {
+            const {
+              statusCode: i,
+              statusCode: o,
+              headers: r,
+              rawBody: a
+            } = t;
+            const n = s.decode(a, this.encoding);
+            e(null, {
+              status: i,
+              statusCode: o,
+              headers: r,
+              rawBody: a,
+              body: n
+            }, n);
+          }, t => {
+            const {
+              message: i,
+              response: o
+            } = t;
+            e(i, o, o && s.decode(o.rawBody, this.encoding));
+          });
+          break;
+      }
+    }
+    post(t, e = () => {}) {
+      const s = t.method ? t.method.toLocaleLowerCase() : "post";
+      switch (t.body && t.headers && !t.headers["Content-Type"] && !t.headers["content-type"] && (t.headers["content-type"] = "application/x-www-form-urlencoded"), t.headers && (delete t.headers["Content-Length"], delete t.headers["content-length"]), undefined === t.followRedirect || t.followRedirect || ((this.isSurge() || this.isLoon()) && (t["auto-redirect"] = false), this.isQuanX() && (t.opts ? t.opts.redirection = false : t.opts = {
+        redirection: false
+      })), this.getEnv()) {
+        case "Surge":
+        case "Loon":
+        case "Stash":
+        case "Shadowrocket":
+        default:
+          this.isSurge() && this.isNeedRewrite && (t.headers = t.headers || {}, Object.assign(t.headers, {
+            "X-Surge-Skip-Scripting": false
+          }));
+          $httpClient[s](t, (t, s, i) => {
+            !t && s && (s.body = i, s.statusCode = s.status ? s.status : s.statusCode, s.status = s.statusCode);
+            e(t, s, i);
+          });
+          break;
+        case "Quantumult X":
+          t.method = s;
+          this.isNeedRewrite && (t.opts = t.opts || {}, Object.assign(t.opts, {
+            hints: false
+          }));
+          $task.fetch(t).then(t => {
+            const {
+              statusCode: s,
+              statusCode: i,
+              headers: o,
+              body: r,
+              bodyBytes: a
+            } = t;
+            e(null, {
+              status: s,
+              statusCode: i,
+              headers: o,
+              body: r,
+              bodyBytes: a
+            }, r, a);
+          }, t => e(t && t.error || "UndefinedError"));
+          break;
+        case "Node.js":
+          let i = require("iconv-lite");
+          this.initGotEnv(t);
+          const {
+            url: o,
+            ...r
+          } = t;
+          this.got[s](o, r).then(t => {
+            const {
+              statusCode: s,
+              statusCode: o,
+              headers: r,
+              rawBody: a
+            } = t;
+            const n = i.decode(a, this.encoding);
+            e(null, {
+              status: s,
+              statusCode: o,
+              headers: r,
+              rawBody: a,
+              body: n
+            }, n);
+          }, t => {
+            const {
+              message: s,
+              response: o
+            } = t;
+            e(s, o, o && i.decode(o.rawBody, this.encoding));
+          });
+          break;
+      }
+    }
+    time(t, e = null) {
+      const s = e ? new Date(e) : new Date();
+      let i = {
+        "M+": s.getMonth() + 1,
+        "d+": s.getDate(),
+        "H+": s.getHours(),
+        "m+": s.getMinutes(),
+        "s+": s.getSeconds(),
+        "q+": Math.floor((s.getMonth() + 3) / 3),
+        S: s.getMilliseconds()
+      };
+      /(y+)/.test(t) && (t = t.replace(RegExp.$1, (s.getFullYear() + "").substr(4 - RegExp.$1.length)));
+      for (let e in i) new RegExp("(" + e + ")").test(t) && (t = t.replace(RegExp.$1, 1 == RegExp.$1.length ? i[e] : ("00" + i[e]).substr(("" + i[e]).length)));
+      return t;
+    }
+    queryStr(t) {
+      let e = "";
+      for (const s in t) {
+        let i = t[s];
+        null != i && "" !== i && ("object" == typeof i && (i = JSON.stringify(i)), e += `${s}=${i}&`);
+      }
+      e = e.substring(0, e.length - 1);
+      return e;
+    }
+    msg(e = t, s = "", i = "", o = {}) {
+      const r = t => {
+        const {
+          $open: e,
+          $copy: s,
+          $media: i,
+          $mediaMime: o
+        } = t;
+        switch (typeof t) {
+          case undefined:
+            return t;
+          case "string":
+            switch (this.getEnv()) {
+              case "Surge":
+              case "Stash":
+              default:
+                return {
+                  url: t
+                };
+              case "Loon":
+              case "Shadowrocket":
+                return t;
+              case "Quantumult X":
+                return {
+                  "open-url": t
+                };
+              case "Node.js":
+                return;
+            }
+          case "object":
+            switch (this.getEnv()) {
+              case "Surge":
+              case "Stash":
+              case "Shadowrocket":
+              default:
+                {
+                  const r = {};
+                  let a = t.openUrl || t.url || t["open-url"] || e;
+                  a && Object.assign(r, {
+                    action: "open-url",
+                    url: a
+                  });
+                  let n = t["update-pasteboard"] || t.updatePasteboard || s;
+                  if (n && Object.assign(r, {
+                    action: "clipboard",
+                    text: n
+                  }), i) {
+                    let t;
+                    let e;
+                    let s;
+                    if (i.startsWith("http")) {
+                      t = i;
+                    } else {
+                      if (i.startsWith("data:")) {
+                        const [t] = i.split(";");
+                        const [, o] = i.split(",");
+                        e = o;
+                        s = t.replace("data:", "");
+                      } else {
+                        e = i;
+                        s = (t => {
+                          const e = {
+                            JVBERi0: "application/pdf",
+                            R0lGODdh: "image/gif",
+                            R0lGODlh: "image/gif",
+                            iVBORw0KGgo: "image/png",
+                            "/9j/": "image/jpg"
+                          };
+                          for (var s in e) if (0 === t.indexOf(s)) {
+                            return e[s];
+                          }
+                          return null;
+                        })(i);
+                      }
+                    }
+                    Object.assign(r, {
+                      "media-url": t,
+                      "media-base64": e,
+                      "media-base64-mime": o ?? s
+                    });
+                  }
+                  Object.assign(r, {
+                    "auto-dismiss": t["auto-dismiss"],
+                    sound: t.sound
+                  });
+                  return r;
+                }
+              case "Loon":
+                {
+                  const s = {};
+                  let o = t.openUrl || t.url || t["open-url"] || e;
+                  o && Object.assign(s, {
+                    openUrl: o
+                  });
+                  let r = t.mediaUrl || t["media-url"];
+                  i?.startsWith("http") && (r = i);
+                  r && Object.assign(s, {
+                    mediaUrl: r
+                  });
+                  console.log(JSON.stringify(s));
+                  return s;
+                }
+              case "Quantumult X":
+                {
+                  const o = {};
+                  let r = t["open-url"] || t.url || t.openUrl || e;
+                  r && Object.assign(o, {
+                    "open-url": r
+                  });
+                  let a = t["media-url"] || t.mediaUrl;
+                  i?.startsWith("http") && (a = i);
+                  a && Object.assign(o, {
+                    "media-url": a
+                  });
+                  let n = t["update-pasteboard"] || t.updatePasteboard || s;
+                  n && Object.assign(o, {
+                    "update-pasteboard": n
+                  });
+                  console.log(JSON.stringify(o));
+                  return o;
+                }
+              case "Node.js":
+                return;
+            }
+          default:
+            return;
+        }
+      };
+      if (!this.isMute) {
+        switch (this.getEnv()) {
+          case "Surge":
+          case "Loon":
+          case "Stash":
+          case "Shadowrocket":
+          default:
+            $notification.post(e, s, i, r(o));
+            break;
+          case "Quantumult X":
+            $notify(e, s, i, r(o));
+            break;
+          case "Node.js":
+            break;
+        }
+      }
+      if (!this.isMuteLog) {
+        let t = ["", "==============📣系统通知📣=============="];
+        t.push(e);
+        s && t.push(s);
+        i && t.push(i);
+        console.log(t.join("\n"));
+        this.logs = this.logs.concat(t);
+      }
+    }
+    debug(...t) {
+      this.logLevels[this.logLevel] <= this.logLevels.debug && (t.length > 0 && (this.logs = [...this.logs, ...t]), console.log(`${this.logLevelPrefixs.debug}${t.map(t => t ?? String(t)).join(this.logSeparator)}`));
+    }
+    info(...t) {
+      this.logLevels[this.logLevel] <= this.logLevels.info && (t.length > 0 && (this.logs = [...this.logs, ...t]), console.log(`${this.logLevelPrefixs.info}${t.map(t => t ?? String(t)).join(this.logSeparator)}`));
+    }
+    warn(...t) {
+      this.logLevels[this.logLevel] <= this.logLevels.warn && (t.length > 0 && (this.logs = [...this.logs, ...t]), console.log(`${this.logLevelPrefixs.warn}${t.map(t => t ?? String(t)).join(this.logSeparator)}`));
+    }
+    error(...t) {
+      this.logLevels[this.logLevel] <= this.logLevels.error && (t.length > 0 && (this.logs = [...this.logs, ...t]), console.log(`${this.logLevelPrefixs.error}${t.map(t => t ?? String(t)).join(this.logSeparator)}`));
+    }
+    log(...t) {
+      t.length > 0 && (this.logs = [...this.logs, ...t]);
+      console.log(t.map(t => t ?? String(t)).join(this.logSeparator));
+    }
+    logErr(t, e) {
+      switch (this.getEnv()) {
+        case "Surge":
+        case "Loon":
+        case "Stash":
+        case "Shadowrocket":
+        case "Quantumult X":
+        default:
+          this.log("", `❗️${this.name}, 错误!`, e, t);
+          break;
+        case "Node.js":
+          this.log("", `❗️${this.name}, 错误!`, e, undefined !== t.message ? t.message : t, t.stack);
+          break;
+      }
+    }
+    wait(t) {
+      return new Promise(e => setTimeout(e, t));
+    }
+    done(t = {}) {
+      const e = (new Date().getTime() - this.startTime) / 1000;
+      switch (this.log("", `🔔${this.name}, 结束! 🕛 ${e} 秒`), this.log(), this.getEnv()) {
+        case "Surge":
+        case "Loon":
+        case "Stash":
+        case "Shadowrocket":
+        case "Quantumult X":
+        default:
+          $done(t);
+          break;
+        case "Node.js":
+          process.exit(1);
+      }
+    }
+  }(t, e);
+}
